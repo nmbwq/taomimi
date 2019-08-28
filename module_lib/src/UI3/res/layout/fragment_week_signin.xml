@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fillViewport="true"
+	android:background="#FFA919">
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/bg_week_signin_top" />
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<ImageView
+				android:id="@+id/iv_common_back"
+				android:layout_marginTop="@dimen/dp_15"
+				android:src="@drawable/ic_common_back_white"
+				android:padding="@dimen/dp_10"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+
+			<!--签到赢大奖-->
+			<ImageView
+				android:id="@+id/iv_week_signin_winpic"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/dp_62"
+				android:src="@drawable/bg_week_signin_win"
+				android:layout_centerInParent="true"
+				android:layout_alignParentTop="true"/>
+
+			<!--完成对号-->
+			<ImageView
+				android:id="@+id/iv_week_right"
+				android:layout_width="@dimen/dp_117"
+				android:layout_height="@dimen/dp_122"
+				android:layout_marginTop="@dimen/dp_30"
+				android:src="@drawable/ic_week_right"
+				android:layout_below="@+id/iv_week_signin_winpic"
+				android:layout_centerInParent="true"/>
+
+			<!--活动规则-->
+			<TextView
+				android:text="活动规则"
+				android:singleLine="false"
+				android:background="@drawable/bg_week_signin_rule"
+				android:id="@+id/tv_week_signin_rule"
+				android:layout_marginTop="@dimen/dp_30"
+				android:textColor="@color/white"
+				android:layout_below="@+id/iv_week_signin_winpic"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"/>
+
+			<android.support.v7.widget.CardView
+				android:id="@+id/card_week_signin"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/dp_223"
+				android:layout_marginLeft="@dimen/sp_15"
+				android:layout_marginRight="@dimen/sp_15"
+				app:cardCornerRadius="@dimen/dp_5"
+				app:cardElevation="@dimen/dp_0"
+				android:layout_below="@+id/iv_week_right"
+				android:layout_marginTop="@dimen/dp_10"
+				app:cardPreventCornerOverlap="false">
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+					<!--连续签到3天-->
+					<TextView
+						android:id="@+id/tv_week_signin_day"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="已连续签到0天"
+						android:layout_centerInParent="true"
+						android:layout_alignParentTop="true"
+						android:layout_marginTop="@dimen/dp_26"
+						android:textSize="@dimen/sp_15"
+						android:textColor="#323232"/>
+
+					<TextView
+						android:id="@+id/tv_week_signin_day_tip"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="连续签到7天就可抽取丰厚大礼哦~"
+						android:layout_centerInParent="true"
+						android:layout_below="@+id/tv_week_signin_day"
+						android:layout_marginTop="@dimen/dp_2"
+						android:textSize="@dimen/sp_10"
+						android:layout_marginBottom="@dimen/dp_20"
+						android:textColor="@color/c_CFCFCF"/>
+
+					<ImageView
+						android:id="@+id/tv_week_quick_sign_tip"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/dp_12"
+						android:layout_marginBottom="@dimen/dp_1"
+						android:background="@drawable/bg_week_quick_signin"
+						android:layout_above="@+id/numSeekBar_week_signin"/>
+
+
+					<FrameLayout
+						android:id="@+id/numSeekBar_week_signin"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_below="@+id/tv_week_signin_day_tip">
+
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="@dimen/dp_10"
+							android:layout_gravity="center"
+							android:background="#FFEFC1"
+							android:layout_marginLeft="@dimen/dp_15"
+							android:layout_marginRight="@dimen/dp_15"/>
+
+
+						<LinearLayout
+							android:id="@+id/ll_week_signin_sign_parent"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="@dimen/dp_5"
+							android:layout_marginRight="@dimen/dp_5"
+							android:layout_gravity="center"
+							android:orientation="horizontal"/>
+
+
+
+
+					</FrameLayout>
+
+					<LinearLayout
+						android:id="@+id/ll_week_signin_weekday"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="@dimen/dp_5"
+						android:orientation="horizontal"
+						android:layout_below="@+id/numSeekBar_week_signin"/>
+					<!--立即签到-->
+					<TextView
+						android:id="@+id/tv_week_signin_sign"
+						android:text="立即签到"
+						android:layout_below="@+id/ll_week_signin_weekday"
+						android:layout_centerInParent="true"
+						android:textColor="#864B19"
+						android:background="@drawable/bg_week_signin_sign"
+						android:layout_width="match_parent"
+						android:layout_marginRight="@dimen/dp_41"
+						android:layout_marginLeft="@dimen/dp_41"
+						android:layout_marginTop="@dimen/dp_23"
+						android:textSize="@dimen/sp_15"
+						android:gravity="center"
+						android:layout_height="@dimen/dp_37"/>
+
+				</RelativeLayout>
+
+
+			</android.support.v7.widget.CardView>
+
+			<FrameLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/card_week_signin"
+				android:layout_marginBottom="@dimen/dp_23"
+				android:clipChildren="false">
+				<com.common.app.view.MyViewPager
+					android:id="@+id/vp_week_signin"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:clipChildren="false"
+					android:layout_marginLeft="@dimen/dp_15"
+					android:layout_marginRight="@dimen/dp_15"
+					android:layout_marginTop="@dimen/dp_15"/>
+			</FrameLayout>
+
+
+
+		</RelativeLayout>
+
+	</FrameLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:descendantFocusability="blocksDescendants">
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_earnings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlDragRate="0.5"
+        app:srlEnableAutoLoadMore="true"
+        app:srlFooterHeight="@dimen/dp_25"
+        app:srlFooterTriggerRate="1"
+        app:srlHeaderHeight="@dimen/dp_40"
+        app:srlHeaderMaxDragRate="1.5"
+        app:srlHeaderTriggerRate="1"
+        app:srlReboundDuration="200"
+        >
+
+    <com.scwang.smartrefresh.layout.header.ClassicsHeader
+        android:id="@+id/smart_earnings_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srlDrawableArrowSize="@dimen/sp_14"
+        app:srlEnableLastTime="true"
+        app:srlTextSizeTitle="@dimen/sp_14"
+        app:srlPrimaryColor="@color/transparent"
+        app:srlAccentColor="@color/c_333333"
+        />
+    <WebView
+        android:id="@+id/web_common"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</FrameLayout>

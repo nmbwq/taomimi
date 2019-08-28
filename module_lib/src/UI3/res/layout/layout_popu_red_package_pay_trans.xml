@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/c_70000000"
+	android:gravity="bottom">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dp_202"
+		android:background="@color/white"
+	>
+
+
+		<EditText
+			android:id="@+id/et_popu_red_package_pay_trans_value"
+			android:background="@drawable/bg_popu_red_package_radius_et"
+			android:hint="转至可提现金额"
+			android:textSize="@dimen/sp_12"
+			android:gravity="center"
+			android:layout_marginLeft="@dimen/dp_20"
+			android:layout_marginRight="@dimen/dp_20"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="@dimen/dp_35"
+			android:textColorHint="@color/c_CFCFCF"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dp_36"/>
+
+		<TextView
+			android:layout_below="@+id/et_popu_red_package_pay_trans_value"
+			android:textSize="@dimen/sp_10"
+			android:textColor="#FF2C2C"
+			android:text="提示:转出金额将返回您账户的可提现金额"
+			android:layout_marginLeft="@dimen/dp_20"
+			android:layout_marginTop="@dimen/dp_10"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+
+		<TextView
+			android:id="@+id/tv_pay_trans_cancle"
+			android:layout_width="@dimen/dp_148"
+			android:layout_height="@dimen/dp_42"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentLeft="true"
+			android:layout_marginBottom="@dimen/dp_23"
+			android:layout_marginLeft="@dimen/dp_15"
+			android:background="@drawable/bg_signin_pay_cancle"
+			android:gravity="center"
+			android:text="取消"
+			android:textColor="#2F2F2F"
+			android:textSize="@dimen/sp_16"
+		/>
+
+		<TextView
+			android:id="@+id/tv_pay_trans_sure"
+			android:layout_width="@dimen/dp_148"
+			android:layout_height="@dimen/dp_42"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginBottom="@dimen/dp_23"
+			android:layout_marginRight="@dimen/dp_15"
+			android:background="@drawable/bg_signin_pay_ture"
+			android:gravity="center"
+			android:text="确定"
+			android:textColor="@color/white"
+			android:textSize="@dimen/sp_16"
+		/>
+
+	</RelativeLayout>
+
+
+</RelativeLayout>

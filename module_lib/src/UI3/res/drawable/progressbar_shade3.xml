@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/dp_10" />
+            <solid android:color="@color/white" />
+
+            <!--//shape可以设置padding-->
+            <!--<padding-->
+                <!--android:left="1dp"-->
+                <!--android:top="1dp"-->
+                <!--android:right="1dp"-->
+                <!--android:bottom="1dp" />-->
+        </shape>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <scale
+            android:drawable="@drawable/custom_progress_primary3"
+            android:scaleWidth="98%" />
+    </item>
+</layer-list>

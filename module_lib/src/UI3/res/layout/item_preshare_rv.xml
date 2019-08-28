@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginRight="@dimen/dp_2"
+    android:layout_marginLeft="@dimen/dp_2"
+    >
+
+    <ImageView
+        android:id="@+id/iv_preshare_shareimg"
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="@dimen/dp_90"
+        />
+    <ImageView
+        android:id="@+id/iv_preshare_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/iv_preshare_shareimg"
+        android:layout_alignTop="@+id/iv_preshare_shareimg"
+        android:padding="@dimen/dp_10"
+        android:src="@drawable/bg_preshare_img_selecter"
+        />
+</RelativeLayout>

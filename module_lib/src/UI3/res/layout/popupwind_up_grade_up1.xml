@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BB000000"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_48"
+        android:layout_marginRight="@dimen/dp_48"
+        android:background="@drawable/bg_myearnings_popff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_popwindow_tishi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_26"
+            android:text="特约店主"
+            android:textSize="@dimen/dp_16"
+            android:textColor="#0A0B08"/>
+        <ImageView
+            android:id="@+id/iv_popwindow_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ic_module_gift"/>
+        <TextView
+            android:id="@+id/tv_popwindow_content1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:text="恭喜您已成功升级为特约店主"
+            android:textSize="@dimen/dp_14"
+            android:textColor="@color/c_2B2B2B"/>
+        <TextView
+            android:id="@+id/tv_popwindow_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_11"
+            android:text="您购买的礼包我们会尽快安排发货哦~"
+            android:textSize="11sp"
+            android:textColor="#AAAAAA"/>
+
+        <ImageView
+            android:id="@+id/iv_popwindow_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_23"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/bg_popwindow_btn_know"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

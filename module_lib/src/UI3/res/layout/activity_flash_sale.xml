@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="java.com.lechuang.module.fensi.FenSiActivity"
+    >
+
+    <include layout="@layout/status_view"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dp_10"
+        >
+        <!--返回按钮-->
+        <ImageView
+            android:id="@+id/iv_common_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/ic_common_back"
+            />
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/iv_common_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="title"
+            android:textColor="@color/c_main_text"
+            android:textSize="@dimen/sp_16"
+            />
+
+        <!--右面文字占位-->
+        <TextView
+            android:id="@+id/tv_common_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:drawableRight="@drawable/ic_fensi_all"
+            android:text="全部"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/c_D9D9D9"
+        android:layout_below="@+id/rl_title"/>
+
+    <!--<RelativeLayout
+        android:id="@+id/rl_titles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="#F7DFC2"
+        >-->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/xTablayout_flashsale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_title"
+            android:layout_marginTop="@dimen/dp_1"
+            app:tabBackground="@drawable/tab_flashsale_background"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="scrollable"
+            android:background="@color/c_F7DFC2"
+            />
+    <!--</RelativeLayout>-->
+
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_flashsale"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_titles"
+        />
+</RelativeLayout>

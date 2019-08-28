@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_120"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/dp_5"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/tv_item_brand_hot_tupian"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_120"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/tv_item_brand_hot_biaoti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/c_5D5D5D"
+        android:textSize="@dimen/sp_14"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_brand_quan_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="@dimen/dp_10"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_brand_hot_quan_left"
+                android:gravity="center"
+                android:text="券"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10"
+                />
+
+            <TextView
+                android:id="@+id/tv_item_brand_hot_quan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_brand_hot_quan_right"
+                android:gravity="center"
+                android:text="¥0.0  "
+                android:paddingLeft="@dimen/dp_2"
+                android:paddingRight="@dimen/dp_5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_brand_hot_quanhoujia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="券后价¥ 0.0  "
+            android:textColor="@color/c_main"
+            android:textSize="@dimen/sp_8"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

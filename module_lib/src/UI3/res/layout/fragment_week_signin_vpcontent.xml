@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+>
+	<android.support.v7.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:cardCornerRadius="@dimen/dp_5"
+		app:cardElevation="@dimen/dp_0"
+		android:layout_below="@+id/iv_week_right"
+		android:layout_marginTop="@dimen/dp_5"
+		app:cardPreventCornerOverlap="false">
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<!--签到时间-->
+			<TextView
+				android:id="@+id/tv_week_signin_vpcontent_time"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/sp_10"
+				android:textColor="#595959"
+				android:gravity="center"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="@dimen/dp_28"
+				android:text=""/>
+
+			<android.support.v7.widget.CardView
+				android:id="@+id/card_week_signin_vpcontent"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/dp_206"
+				app:cardCornerRadius="@dimen/dp_5"
+				app:cardElevation="@dimen/dp_0"
+				android:layout_marginTop="@dimen/dp_10"
+				android:layout_marginLeft="@dimen/dp_26"
+				android:layout_marginRight="@dimen/dp_26"
+				android:layout_below="@+id/tv_week_signin_vpcontent_time"
+				android:layout_centerHorizontal="true"
+				app:cardPreventCornerOverlap="false">
+
+				<FrameLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+					<ImageView
+						android:id="@+id/iv_week_signin_vpcontent"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:scaleType="fitXY"/>
+
+					<!--抢光了-->
+					<ImageView
+						android:id="@+id/iv_week_signin_vpcontent_finish"
+						android:layout_width="@dimen/dp_111"
+						android:layout_height="@dimen/dp_111"
+						android:layout_gravity="center"
+						android:src="@drawable/ic_week_signin_vpcontent_finish"
+						android:visibility="gone"
+						android:scaleType="fitXY"/>
+
+				</FrameLayout>
+			</android.support.v7.widget.CardView>
+
+
+			<TextView
+				android:id="@+id/tv_week_signin_vpcontent_price_tip"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/sp_10"
+				android:textColor="@color/c_FE3F47"
+				android:gravity="center"
+				android:layout_centerVertical="true"
+				android:layout_marginTop="@dimen/dp_15"
+				android:layout_below="@+id/card_week_signin_vpcontent"
+				android:layout_marginLeft="@dimen/dp_26"
+				android:text="¥"/>
+
+			<TextView
+				android:id="@+id/tv_week_signin_vpcontent_price"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/sp_21"
+				android:textColor="@color/c_FE3F47"
+				android:gravity="center"
+				android:layout_centerVertical="true"
+				android:layout_marginTop="@dimen/dp_3"
+				android:layout_marginLeft="@dimen/dp_3"
+				android:layout_below="@+id/card_week_signin_vpcontent"
+				android:layout_toRightOf="@+id/tv_week_signin_vpcontent_price_tip"
+				android:text="0.00"/>
+
+			<TextView
+				android:id="@+id/tv_week_signin_vpcontent_price_numunit"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/sp_10"
+				android:textColor="@color/c_A9A9A9"
+				android:layout_marginTop="@dimen/dp_12"
+				android:gravity="center"
+				android:layout_marginLeft="@dimen/dp_10"
+				android:layout_below="@+id/card_week_signin_vpcontent"
+				android:layout_toRightOf="@+id/tv_week_signin_vpcontent_price"
+				android:text="共0个"/>
+
+			<TextView
+				android:id="@+id/tv_week_signin_vpcontent_name"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/sp_12"
+				android:textColor="@color/c_2F2F2F"
+				android:gravity="left"
+				android:layout_marginTop="@dimen/dp_2"
+				android:layout_marginLeft="@dimen/dp_26"
+				android:layout_marginRight="@dimen/dp_26"
+				android:layout_below="@+id/tv_week_signin_vpcontent_price"
+				android:text="xxxx"/>
+
+			<TextView
+				android:id="@+id/tv_week_signin_vpcontent_join_sign"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/dp_37"
+				android:textSize="@dimen/sp_15"
+				android:textColor="@color/c_864B19"
+				android:gravity="center"
+				android:layout_marginTop="@dimen/dp_20"
+				android:layout_marginLeft="@dimen/dp_41"
+				android:layout_marginRight="@dimen/dp_41"
+				android:layout_below="@+id/tv_week_signin_vpcontent_name"
+				android:background="@drawable/bg_week_signin_sign"
+				android:text="参与此期签到"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/sp_10"
+				android:textColor="@color/c_CFCFCF"
+				android:layout_marginTop="@dimen/dp_10"
+				android:gravity="center"
+				android:layout_below="@+id/tv_week_signin_vpcontent_join_sign"
+				android:layout_centerHorizontal="true"
+				android:text="数量有限，先到先得"
+				android:layout_marginBottom="@dimen/dp_15"/>
+
+		</RelativeLayout>
+
+	</android.support.v7.widget.CardView>
+
+	<!--第x期-->
+	<TextView
+		android:id="@+id/tv_week_signin_vpcontent_nper"
+		android:layout_gravity="center_horizontal"
+		android:text="第x期"
+		android:gravity="center"
+		android:layout_width="@dimen/dp_147"
+		android:layout_height="@dimen/dp_28"
+		android:background="@drawable/ic_week_signin_numbg"/>
+
+</FrameLayout>

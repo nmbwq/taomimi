@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:le="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/dp_5"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/dp_5"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <com.common.app.view.SquareImageView
+                android:id="@+id/iv_item_product_product_tupian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/tv_item_product_product_butie_yongjin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_main"
+                android:gravity="center"
+                android:text="补贴佣金  ¥0.00"
+                android:textColor="@color/white"
+                android:layout_gravity="bottom"
+                android:visibility="gone"
+                />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <com.common.app.view.SpannelTextViewMore
+                android:id="@+id/tv_item_product_product_biaoti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="12sp"
+                le:drawText="hhhh"
+                le:shopType="1"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/tv_item__product_product_single_yugu_yongjin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_product_zhuan_single_bottom2"
+                android:gravity="center"
+                android:text="预计赚"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_8"
+                android:layout_marginRight="@dimen/dp_5"
+                />
+
+            <TextView
+                android:id="@+id/tv_item_product_product_single_sheng_yongjin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_product_zhuan_single_top2"
+                android:gravity="center"
+                android:text="升级赚"
+                android:textColor="@color/c_main"
+                android:textSize="@dimen/sp_8"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            >
+            <!--现价 ==  券后价-->
+            <TextView
+                android:id="@+id/tv_item_product_product_xianjia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥x.xx"
+                android:textColor="@color/c_main_text"
+                android:textSize="@dimen/sp_18"
+                />
+            <TextView
+                android:id="@+id/tv_item_product_product_xiaoliang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="月销0"
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/sp_12"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            >
+
+            <TextView
+                android:id="@+id/tv_item_product_product_yuanjia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="¥0.0"
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/sp_12"
+                />
+            <TextView
+                android:id="@+id/tv_item_product_product_quan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_product_quan"
+                android:text="¥0.0  "
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

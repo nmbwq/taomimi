@@ -1,0 +1,151 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        putParam(
+                it,
+                rootProject.ext.base_field.base_url,
+                rootProject.ext.base_field.ali_pid,
+                rootProject.ext.base_field.ali_pid_key,
+                rootProject.ext.android.applicationId,//默认的存储位置
+                rootProject.ext.android.appName,//默认的存储位置
+                rootProject.ext.android.dbName,//数据库的名称
+                rootProject.ext.base_field.wxAppId,//数据库的名称
+                rootProject.ext.base_field.wxAppSecret,//数据库的名称
+                rootProject.ext.android.applicationId
+        )
+        //还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+
+        it.manifestPlaceholders = [
+                JPUSH_PKGNAME: rootProject.ext.android.applicationId,
+                JPUSH_APPKEY : rootProject.ext.base_field.jiGuang, //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+//混淆        https://blog.csdn.net/w690333243/article/details/76068244
+//   gradle android基本配置详解   https://blog.csdn.net/linkuiyao/article/details/78079871
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+//    repositories {
+//        flatDir {
+//            dirs 'libs'
+//        }
+//    }
+}
+
+//统一配置基础字段
+static def putParam(
+        def it, def base_url, def ali_pid, def ali_pid_key,
+        def file_path, def app_name, def db_name, def wxAppId, def wxAppSecret,def applicationId) {
+    it.buildConfigField 'String', 'BASE_URL', "\"${base_url}\""
+    it.buildConfigField 'String', 'ALI_PID', "\"${ali_pid}\""
+    it.buildConfigField 'String', 'ALI_PID_KEY', "\"${ali_pid_key}\""
+    it.buildConfigField 'String', 'FILE_PATH', "\"${file_path}\""
+    it.buildConfigField 'String', 'APP_NAME', "\"${app_name}\""
+    it.buildConfigField 'String', 'DBNAME', "\"${db_name}\""
+    it.buildConfigField 'String', 'WXAPPID', "\"${wxAppId}\""
+    it.buildConfigField 'String', 'WXAPPSECRET', "\"${wxAppSecret}\""
+    it.buildConfigField 'String','applicationId', "\"${applicationId}\""
+}
+
+greendao {
+    schemaVersion 16//数据库schema版本号，通过*OpenHelpers迁移数据，schema改变值增加。默认为1
+    daoPackage 'com.common.app.database'//生成DAOs、DaoMaster、DaoSession的包名。默认为entities所在包名。
+    targetGenDir 'src/main/java'//生成DAOs、DaoMaster、DaoSession的目录。默认为build/generated/source/greendao
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api(name: 'alibc_trade_sdk-3.1.1.210', ext: 'aar')
+    api(name: 'alibc_trade_common-3.1.1.210', ext: 'aar')
+    api(name: 'alibc_trade_biz-3.1.1.210', ext: 'aar')
+    api(name: 'alibabauth_ui-1.4.3', ext: 'aar')
+    api(name: 'alibc_link_partner-1.1.0.6', ext: 'aar')
+    api(name: 'securitybodyaar3-5.1.25', ext: 'aar')
+    api(name: 'securityguardaar3-5.1.81', ext: 'aar')
+    api(name: 'tuniontradesdk-0.3.2', ext: 'aar')
+    api(name: 'alipaySdk-15.5.9-20181123210657-noUtdid', ext: 'aar')
+    implementation files('libs/tbs_sdk_thirdapp_v3.6.0.1249_43610_sharewithdownload_withoutGame_obfs_20180608_114954.jar')
+    api project(':Ushare')
+    api project(':Mzbanner')
+    api project(':bannerlib')
+//    implementation files('libs/utdid4all-1.1.5.3_proguard.jar')//通热修复冲突被删除
+    implementation files('libs/alibabauth_core-1.4.3.jar')
+    implementation files('libs/alibabauth_ext-1.4.3.jar')
+//    implementation files('libs/alipaySingle-20160825.jar')
+    implementation files('libs/fastjson-1.2.9.jar')
+    implementation files('libs/mtopsdk_allinone_open-1.2.2.4.jar')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    api rootProject.ext.dependencies.jpush
+    api rootProject.ext.dependencies.jcore
+
+    api rootProject.ext.dependencies.multidex
+    api rootProject.ext.dependencies.appcompat_v7
+    api rootProject.ext.dependencies.cardview
+    api rootProject.ext.dependencies.design
+    api rootProject.ext.dependencies.retrofit
+    api rootProject.ext.dependencies.retrofit_converter_gson
+    api rootProject.ext.dependencies.retrofit_adapter_rxjava2
+    api rootProject.ext.dependencies.gson
+    api rootProject.ext.dependencies.rxandroid
+    api rootProject.ext.dependencies.rxjava
+    api rootProject.ext.dependencies.glide
+    api rootProject.ext.dependencies.constraint_layout
+    api rootProject.ext.dependencies.eventbus
+    api rootProject.ext.dependencies.okhttp3_logging
+    api rootProject.ext.dependencies.SmartRefreshLayout
+    api rootProject.ext.dependencies.banner
+//    api rootProject.ext.dependencies.MZBannerView//已经处理成lib包依赖在项目里面
+    api rootProject.ext.dependencies.butterknife
+    api rootProject.ext.dependencies.greendao
+    api rootProject.ext.dependencies.zxing
+    //https://www.cnblogs.com/zsychanpin/p/7084597.html     通用适配1
+    //https://github.com/CymChad/BaseRecyclerViewAdapterHelper     通用适配2
+    api rootProject.ext.dependencies.libadapter
+    api rootProject.ext.dependencies.RViewAdapterHelper
+    api rootProject.ext.dependencies.permission
+    api rootProject.ext.dependencies.GreenDaoUpgradeHelper
+    api rootProject.ext.dependencies.arouter_api
+    api rootProject.ext.dependencies.XTabLayout
+    api rootProject.ext.dependencies.flowlayout
+    api rootProject.ext.dependencies.marqueeview
+    api rootProject.ext.dependencies.PhotoView
+    api rootProject.ext.dependencies.hotfix
+    api rootProject.ext.dependencies.wechat
+//    api rootProject.ext.dependencies.LRecyclerView
+    api rootProject.ext.dependencies.LuckView
+    api rootProject.ext.dependencies.droidsonroidsgif
+
+}

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="java.com.lechuang.module.set.VerifyActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tv_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_25" />
+
+        <RelativeLayout
+            android:id="@+id/rl_common_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/dp_10">
+            <!--返回按钮-->
+            <ImageView
+                android:id="@+id/iv_common_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/ic_common_back" />
+
+            <!--关闭按钮-->
+            <TextView
+                android:id="@+id/iv_common_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/iv_common_back"
+                android:padding="@dimen/dp_5"
+                android:text="关闭"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone" />
+
+            <!--标题-->
+            <TextView
+                android:id="@+id/iv_common_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dp_50"
+                android:layout_marginRight="@dimen/dp_95"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/c_2F2F2F"
+                android:textSize="@dimen/dp_17" />
+
+            <!--右面图片占位，不可与右面文字同时存在-->
+            <ImageView
+                android:id="@+id/iv_common_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/ic_common_back"
+                android:visibility="gone" />
+
+            <!--右面文字占位,不可与右面图片同时存在-->
+            <TextView
+                android:id="@+id/tv_common_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="占位"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_13"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/c_D9D9D9"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_152"
+        android:layout_marginTop="@dimen/dp_14"
+        android:background="@drawable/bg_signin_record_title">
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginRight="@dimen/dp_14"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_income"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:text="6"
+                    android:textSize="@dimen/dp_23"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="共投入(元)"
+                    android:textSize="@dimen/dp_10"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_earn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:text="5.07"
+                    android:textSize="@dimen/dp_23"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="收入(元)"
+                    android:textSize="@dimen/dp_10"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_to_participate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:text="2"
+                    android:textSize="@dimen/dp_23"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="参与(天)"
+                    android:textSize="@dimen/dp_10"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_successful"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:text="1"
+                    android:textSize="@dimen/dp_23"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="成功(天)"
+                    android:textSize="@dimen/dp_10"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:text="战绩明细"
+            android:textSize="@dimen/dp_17"
+            android:textColor="@color/c_2F2F2F"/>
+    </RelativeLayout>
+
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_signin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlDragRate="0.5"
+        app:srlEnableAutoLoadMore="true"
+        app:srlFooterHeight="@dimen/dp_25"
+        app:srlFooterTriggerRate="1"
+        app:srlHeaderHeight="@dimen/dp_40"
+        app:srlHeaderMaxDragRate="1.5"
+        app:srlHeaderTriggerRate="1"
+        app:srlReboundDuration="200">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:id="@+id/smart_earnings_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:srlDrawableArrowSize="@dimen/sp_14"
+            app:srlEnableLastTime="true"
+            app:srlTextSizeTitle="@dimen/sp_14" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_15"
+            android:orientation="vertical">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rl_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <include layout="@layout/layout_news_error"/>
+
+        </LinearLayout>
+
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:id="@+id/smart_news_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlDrawableArrowSize="@dimen/sp_14"
+            app:srlTextSizeTitle="@dimen/sp_14"
+            />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

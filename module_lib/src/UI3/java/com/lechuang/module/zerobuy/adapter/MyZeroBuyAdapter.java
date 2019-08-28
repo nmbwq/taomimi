@@ -1,0 +1,30 @@
+package java.com.lechuang.module.zerobuy.adapter;
+
+import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
+import com.chad.library.adapter.base.BaseViewHolder;
+
+import java.com.lechuang.module.mytry.bean.MyTryAllEntity;
+import java.com.lechuang.module.zerobuy.bean.MyZeroBuyEntity;
+import java.util.List;
+
+/**
+ * @author: zhengjr
+ * @since: 2018/10/22
+ * @describe:
+ */
+
+public abstract class MyZeroBuyAdapter<T extends MyZeroBuyEntity, K extends BaseViewHolder> extends BaseMultiItemQuickAdapter<MyZeroBuyEntity, BaseViewHolder> {
+    /**
+     * Same as QuickAdapter#QuickAdapter(Context,int) but with
+     * some initialization data.
+     *
+     * @param data A new list is created out of this one to avoid mutable list
+     */
+    public MyZeroBuyAdapter(List<MyZeroBuyEntity> data) {
+        super(data);
+        addItemTypeView();
+    }
+
+    protected abstract void addItemTypeView();
+
+}

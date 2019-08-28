@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tv_search_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:text="@string/s_app"
+        />
+
+    <TextView
+        android:id="@+id/tv_search_taobao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:text="@string/s_tb"
+        android:textColor="@color/c_main"
+        />
+
+    <TextView
+        android:id="@+id/tv_search_jingdong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:text="@string/s_jd"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_search_pinduoduo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:text="@string/s_pdd"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background=" #F4F4F4 "
+    >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+            <include layout="@layout/status_view1"
+                />
+        <RelativeLayout
+            android:id="@+id/rl_common_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F4F4F4 "
+            android:paddingRight="@dimen/dp_10"
+            >
+            <!--返回按钮-->
+            <ImageView
+                android:id="@+id/iv_common_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/ic_common_back"
+                />
+
+            <!--标题-->
+            <TextView
+                android:id="@+id/iv_common_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dp_50"
+                android:layout_marginRight="@dimen/dp_95"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="选择收获地址"
+                android:textColor="@color/c_main_text"
+                android:textSize="@dimen/sp_16"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/tv_zuji_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_addadress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保存"
+                    android:textSize="14sp"
+                    android:textColor="@color/c_FA6400"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:hint="收货人"
+        android:textColorHint="#A3A3A3"
+        android:textSize="14sp"
+        android:textColor="#222222"
+        android:paddingLeft="12dp"
+        android:paddingRight="20dp"
+        android:maxLength="30"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/c_line"
+        />
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:hint="手机号码"
+        android:textColorHint="#A3A3A3"
+        android:textSize="14sp"
+        android:textColor="#222222"
+        android:paddingLeft="12dp"
+        android:paddingRight="20dp"
+        android:inputType="number"
+        android:maxLength="11"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/c_line"
+        />
+    <TextView
+        android:id="@+id/tv_adress"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:hint="所在地区"
+        android:textColorHint="#A3A3A3"
+        android:textSize="14sp"
+        android:textColor="#222222"
+        android:paddingLeft="12dp"
+        android:paddingRight="20dp"
+        android:gravity="center_vertical"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/c_line"
+        />
+
+
+    <EditText
+        android:id="@+id/et_detail_adress"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:hint="详细地址: 如道路、门牌号、小区、楼栋号"
+        android:textColorHint="#A3A3A3"
+        android:textSize="14sp"
+        android:textColor="#222222"
+        android:paddingLeft="12dp"
+        android:paddingRight="20dp"
+        android:gravity="top"
+        android:paddingTop="10dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+         android:paddingRight="12dp"
+        android:paddingLeft="12dp"
+        android:layout_marginTop="20dp"
+        >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设为默认地址"
+            android:textColor="#3D3D3D"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            />
+
+        <Switch
+            android:id="@+id/switch_red_pack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:checked="false"
+            android:layout_centerVertical="true"
+            android:layout_alignBaseline="@+id/tv_red_package_txt"
+            android:track="@drawable/notify_switch_track_selecter"
+            android:thumb="@drawable/notify_switch_thumb_seleter"/>
+
+        
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="删除收货地址"
+        android:textColor="#F44647"
+        android:textSize="14sp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        />
+
+</LinearLayout>

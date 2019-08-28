@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		  package="com.lechuang.module">
+
+
+	<application>
+
+		<!-- 商品分享预览 -->
+		<activity
+			android:name="java.com.lechuang.module.productinfo.PreShareActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustPan"/>
+
+		<!-- 搜索页 -->
+		<activity
+			android:name="java.com.lechuang.module.search.SearchActivity"
+			android:launchMode="singleTask"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 搜索结果页 -->
+		<activity
+			android:name="java.com.lechuang.module.search.SearchResultActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 首页商品栏目二级列表 -->
+		<activity
+			android:name="java.com.lechuang.module.product.ProductLanMuActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 首页商品集合页列表 -->
+		<activity
+			android:name="java.com.lechuang.module.product.ProductJiHeActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 首页其他子类列表 -->
+		<activity
+			android:name="java.com.lechuang.module.product.OtherProductActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 首页商品集合页列表 -->
+		<activity
+			android:name="java.com.lechuang.module.product.ProductTypeActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 关于我们 -->
+		<activity
+			android:name="java.com.lechuang.module.aboutus.AboutUsActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 粉丝界面 -->
+		<activity
+			android:name="java.com.lechuang.module.fensi.FenSiActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 设置  消息 -->
+		<activity
+			android:name="java.com.lechuang.module.set.NewsActivity"
+			android:launchMode="singleTask"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 消息内容 -->
+		<activity
+			android:name="java.com.lechuang.module.set.NewsContentActivity"
+			android:launchMode="singleTask"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 设置页面 -->
+		<activity
+			android:name="java.com.lechuang.module.set.SetActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 修改昵称 -->
+		<activity
+			android:name="java.com.lechuang.module.set.UpdataNickActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 收益页面 -->
+		<activity
+			android:name="java.com.lechuang.module.earnings.MyEarningsActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 订单界面 -->
+		<activity
+			android:name="java.com.lechuang.module.order.OrderActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 身份验证 -->
+		<activity
+			android:name="java.com.lechuang.module.set.VerifyActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 更换手机号 -->
+		<activity
+			android:name="java.com.lechuang.module.set.UpdataPhoneActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 绑定支付宝 -->
+		<activity
+			android:name="java.com.lechuang.module.set.BindZfbActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 支付宝绑定完成 -->
+		<activity
+			android:name="java.com.lechuang.module.set.CompleteBindActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 更换手机号密码 -->
+		<activity
+			android:name="java.com.lechuang.module.set.UpdataPsdActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 微信客服 -->
+		<activity
+			android:name="java.com.lechuang.module.kefu.WxKeFuActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 分享APP图片 -->
+		<activity
+			android:name="java.com.lechuang.module.shareapp.ShareAppActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 商品详情 -->
+		<activity
+			android:name="java.com.lechuang.module.productinfo.ProductInfoActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 收藏 -->
+		<activity
+			android:name="java.com.lechuang.module.shoucang.ShouCangActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<!-- 足迹 -->
+		<activity
+			android:name="java.com.lechuang.module.zuji.ZuJiActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<activity
+			android:name="java.com.lechuang.module.earnings.EarningsRecordActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<activity
+			android:name="java.com.lechuang.module.set.AuthenticationActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<activity
+			android:name="java.com.lechuang.module.fensi.MyFansActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<activity
+			android:name="java.com.lechuang.module.withdrawdeposit.WithdrawDepositActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+		<activity
+			android:name="java.com.lechuang.module.view.CommonSuperWebViewActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+		<activity
+			android:name="java.com.lechuang.module.feedback.FeedBackActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"/>
+
+        <!-- 图片预览 -->
+        <activity
+            android:name="java.com.lechuang.module.view.PreviewImgActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <!--重新生成主图页-->
+        <activity
+            android:name="java.com.lechuang.module.productinfo.ProductionImgActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <!-- 意见反馈 -->
+        <activity
+            android:name="java.com.lechuang.module.set.FanKuiActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <!-- 限时抢购 -->
+        <activity
+            android:name="java.com.lechuang.module.flashsale.FlashSaleActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <!-- 通知消息提示 -->
+        <activity
+            android:name="java.com.lechuang.module.set.NewsNotifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <!-- 通用webview -->
+        <activity
+            android:name="java.com.lechuang.module.view.CommonWebViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <activity
+            android:name="java.com.lechuang.module.superentrance.SuperTutorialActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <activity
+            android:name="java.com.lechuang.module.card.MyCardActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <activity
+            android:name="java.com.lechuang.module.card.MyCardMoreActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <activity
+            android:name="java.com.lechuang.module.card.MyCardRecordActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <activity
+            android:name="java.com.lechuang.module.card.MyCardExchangeActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <activity
+            android:name="java.com.lechuang.module.card.MyCardExchangeRecordActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <activity
+            android:name="java.com.lechuang.module.signin.SignInActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <activity
+            android:name="java.com.lechuang.module.signin.SignInChallengeActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <activity
+            android:name="java.com.lechuang.module.signin.SignInRecordActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <activity
+            android:name="java.com.lechuang.module.mytry.MyTryActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <activity
+            android:name="java.com.lechuang.module.mytry.TryRuleActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+		<activity
+			android:name="java.com.lechuang.module.mytry.TryDetailsActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+		<!--参与成功的返回页-->
+		<activity
+			android:name="java.com.lechuang.module.mytry.JoinSuccessActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+		<!--签到规则-->
+		<activity
+			android:name="java.com.lechuang.module.weeksignin.WeekSigninRuleActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+		<activity
+			android:name="java.com.lechuang.module.bigwhell.MyBigWhellActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+		<!--我的拉新榜单-->
+		<activity
+			android:name="java.com.lechuang.module.laxin.MineBangDanActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+		<!--我的拉新榜单弹窗-->
+		<activity
+			android:name="java.com.lechuang.module.laxin.MineBangDanInviteActivity"
+			android:theme="@style/mineBangDanTransparent"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+		<activity
+			android:name="java.com.lechuang.module.bigwhell.BigWhellRuleActivity"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+		<activity
+			android:name="java.com.lechuang.module.bigwhell.BigWhellRecordActivity"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+		/>
+
+		<activity
+			android:name="java.com.lechuang.module.zerobuy.MyZeroBuyActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+		/>
+		<activity
+			android:name="java.com.lechuang.module.zerobuy.ZeroBuyRuleActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+		/>
+		<activity
+			android:name="java.com.lechuang.module.zerobuy.ZeroBuyDetailsActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+		/>
+		<!--神秘宝箱首页-->
+		<activity
+			android:name="java.com.lechuang.module.treasurebox.MyTreasureBoxActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+		/>
+		<activity
+			android:name="java.com.lechuang.module.zerobuy.ParticipateSuccessActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+		/>
+
+		<!--我的奖品-->
+		<activity
+			android:name="java.com.lechuang.module.treasurebox.ValueBangDanActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+		/>
+
+		<!--我的榜单规则-->
+		<activity
+			android:name="java.com.lechuang.module.treasurebox.ValueRuleActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+		/>
+		<!--天猫超市首页-->
+		<activity
+			android:name="java.com.lechuang.module.tmallsupermarket.TmallSupermarketActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+		/>
+		<!--天猫超市优惠券-->
+		<activity
+			android:name="java.com.lechuang.module.tmallsupermarket.TmallSupermarketYHJDetailsActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+		/>
+		<!--天猫超市图片-->
+		<activity
+			android:name="java.com.lechuang.module.tmallsupermarket.TmallSupermarketImageActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+		<!--天猫超市说明-->
+		<activity
+			android:name="java.com.lechuang.module.tmallsupermarket.TmallSupermarketRuleActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+
+		<!--新人红包-->
+		<activity
+			android:name="java.com.lechuang.module.redpackage.RedPackageActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+		/>
+
+		<!--新人红包明细-->
+		<activity
+			android:name="java.com.lechuang.module.redpackage.RedPackageInfoActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+		/>
+		<!--新人红包明细-->
+		<activity
+			android:name="java.com.lechuang.module.upgrade.UpGradeDetailsActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+		/>
+		<!--地址列表界面-->
+		<activity
+			android:name="java.com.lechuang.module.adress.AdressListActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+		<!--增加以及修改地址界面-->
+		<activity
+			android:name="java.com.lechuang.module.adress.AddandUpdateActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+		<!--购买订单页-->
+		<activity
+			android:name="java.com.lechuang.module.upgrade.MyOrderActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+		<!--津贴提现-->
+		<activity
+			android:name="java.com.lechuang.module.withdrawdeposit.WithdrawalAllowanceActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+		<!--津贴提现记录-->
+		<activity
+			android:name="java.com.lechuang.module.withdrawdeposit.WithdrawalAllowanceRecordActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+		<!--津贴提现记录-->
+		<activity
+			android:name="java.com.lechuang.module.other.FindTaoOrderActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			/>
+	</application>
+
+</manifest>

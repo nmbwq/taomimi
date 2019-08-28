@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/c_20ffffff"
+	android:gravity="center">
+
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dp_205"
+	>
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/dp_40"
+			android:layout_marginRight="@dimen/dp_40"
+			android:background="@color/white"
+			android:layout_gravity="center">
+			<TextView
+				android:id="@+id/tv_mine_try_code"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="我的抽奖码(x个)"
+				android:gravity="center"
+				android:layout_alignParentTop="true"
+				android:layout_centerInParent="true"
+				android:textSize="@dimen/sp_15"
+				android:textColor="@color/c_2F2F2F"
+				android:layout_marginTop="@dimen/dp_8"
+				android:layout_marginBottom="@dimen/dp_8"
+			/>
+
+			<ImageView
+				android:id="@+id/iv_mine_try_code_close"
+				android:layout_width="@dimen/dp_20"
+				android:layout_height="@dimen/dp_20"
+				android:text="我"
+				android:gravity="center"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentRight="true"
+				android:padding="@dimen/dp_3"
+				android:layout_marginTop="@dimen/dp_8"
+				android:layout_marginRight="@dimen/dp_5"
+				android:src="@drawable/ic_common_close"/>
+
+			<View
+				android:id="@+id/v_mine_try_line"
+				android:layout_width="wrap_content"
+				android:layout_height="@dimen/dp_1"
+				android:background="@color/c_F6F6F6"
+				android:layout_below="@+id/tv_mine_try_code"/>
+
+
+			<android.support.v7.widget.RecyclerView
+				android:id="@+id/rv_mine_try_code"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/v_mine_try_line"
+				android:layout_marginTop="@dimen/dp_5"
+				android:layout_marginBottom="@dimen/dp_5"
+			/>
+		</RelativeLayout>
+
+	</FrameLayout>
+
+</RelativeLayout>

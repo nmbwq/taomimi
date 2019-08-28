@@ -1,0 +1,59 @@
+<resources>
+	<string name="app_name">不动模块</string>
+
+	<string name="s_app">APP</string>
+	<string name="s_tb">淘宝</string>
+	<string name="s_jd">京东</string>
+	<string name="s_pdd">拼多多</string>
+
+	<string name="s_all">全部</string>
+	<string name="s_super_vip">超级会员</string>
+	<string name="s_plain_vip">普通会员</string>
+
+
+	<!--粉丝数据-->
+	<string-array name="s_fensi_tab">
+		<item>全部</item>
+		<item>直邀</item>
+		<item>推荐</item>
+	</string-array>
+
+	<!--觅卡title-->
+	<string-array name="s_mycard_tab">
+		<item>已使用</item>
+		<item>已失效</item>
+	</string-array>
+
+	<string name="s_news_shouyi">收益消息</string>
+	<string name="s_news_other">其他消息</string>
+	<string name="s_order_hint">输入订单编号</string>
+	<string name="s_set_succes">成功</string>
+
+	<string name="cancle">取消</string>
+	<string name="title">请选择时间</string>
+	<string name="commit">确定</string>
+	<string name="year">年</string>
+	<string name="month">月</string>
+	<string name="day">日</string>
+	<string name="hour">时</string>
+	<string name="minute">分</string>
+
+	<string-array name="s_super_tab_bean">
+		<item>美妆</item>
+		<item>美食</item>
+		<item>家居</item>
+		<item>女装</item>
+		<item>男装</item>
+		<item>母婴</item>
+		<item>数码</item>
+		<!--<item>箱包</item>
+        <item>文娱车品</item>
+        <item>配饰</item>
+        <item>家装家纺</item>
+        <item>运动户外</item>-->
+	</string-array>
+
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

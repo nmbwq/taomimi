@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/c_F6F6F6"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_134"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_12">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/dp_5"
+            app:cardElevation="@dimen/dp_0"
+            app:cardPreventCornerOverlap="false">
+        <ImageView
+            android:id="@+id/rl_all_colour"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        </android.support.v7.widget.CardView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_card_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="抽奖红卡"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_16" />
+
+            <com.common.app.utils.CountDownTextView
+                android:id="@+id/tv_card_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_marginTop="@dimen/dp_3"
+                android:layout_below="@+id/tv_card_name"
+                android:text="倒计时"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                android:textSize="@dimen/dp_13" />
+
+            <TextView
+                android:id="@+id/tv_card_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:text="剩余2张"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_12" />
+
+            <TextView
+                android:id="@+id/tv_used"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_25"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@drawable/bg_mycard_used"
+                android:gravity="center"
+                android:text="去使用"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_12" />
+
+            <!--<TextView
+                android:id="@+id/tv_card_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:text="查看  >"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_12" />-->
+
+
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_mycard_expiring"
+            android:layout_width="@dimen/dp_72"
+            android:layout_height="@dimen/dp_72"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_mycard_expiring"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

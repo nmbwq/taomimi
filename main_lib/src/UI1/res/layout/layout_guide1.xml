@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <!--android:background="@drawable/bg_guide"-->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:src="@drawable/guide1_up"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/guide1_middle"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="@dimen/dp_77"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/guide1_dot"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="@dimen/dp_30"
+        />
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/guide1_up"-->
+        <!--android:layout_marginTop="@dimen/dp_90"-->
+        <!--android:layout_marginLeft="@dimen/dp_63"-->
+        <!--/>-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/guide1_middle"-->
+        <!--android:layout_gravity="center"-->
+        <!--/>-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/guide1_dot"-->
+        <!--android:layout_gravity="bottom|center"-->
+        <!--android:layout_marginBottom="@dimen/dp_50"-->
+
+        <!--/>-->
+
+
+
+</FrameLayout>

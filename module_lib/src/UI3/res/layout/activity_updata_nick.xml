@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="java.com.lechuang.module.set.UpdataNickActivity"
+    >
+    <include layout="@layout/common_header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_25"
+        android:background="@color/c_FAFAFA">
+        <EditText
+            android:id="@+id/et_updata_nick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:padding="@dimen/dp_10"
+            android:background="@color/c_FAFAFA"
+            android:hint="请输入昵称"
+            android:maxLength="20"
+            android:textColorHint="#cccccc"
+            android:textCursorDrawable="@drawable/cursor_et_color"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2-20个字符，可由中英文、数字、符号组成"
+        android:textColor="@color/c_929292"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        />
+
+    <TextView
+        android:id="@+id/et_updata_complete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:background="@drawable/bg_setview_btn"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:text="完成"
+        />
+
+
+</LinearLayout>

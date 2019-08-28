@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_F4F4F4"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnableAutoLoadMore="true"
+            app:srlDragRate="0.5"
+            app:srlHeaderHeight="@dimen/dp_25"
+            app:srlHeaderTriggerRate="1"
+            app:srlFooterHeight="@dimen/dp_25"
+            app:srlFooterTriggerRate="1"
+            android:id="@+id/smart_fensi">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:id="@+id/smart_fensi_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlTextSizeTitle="@dimen/sp_14"
+                app:srlDrawableArrowSize="@dimen/sp_14"
+                app:srlEnableLastTime="false"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_fensi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                <include layout="@layout/layout_common_net_error"/>
+            </LinearLayout>
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:id="@+id/smart_fensi_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlTextSizeTitle="@dimen/sp_14"
+                app:srlDrawableArrowSize="@dimen/sp_14"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </RelativeLayout>
+</FrameLayout>

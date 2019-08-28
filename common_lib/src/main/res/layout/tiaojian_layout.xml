@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_type"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <!--android:drawableRight="@drawable/btn_tiaojian_img_down_selector"-->
+        <TextView
+            android:id="@+id/tv_zonghe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:text="综合"
+            android:textColor="@drawable/tiaojian_tv_selector"
+            android:textSize="@dimen/sp_14"
+            />
+
+        <View
+            android:id="@+id/v_zonghe"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@drawable/tiaojian_indicator_selector"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_jiage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/btn_tiaojian_img_down_selector"
+            android:padding="@dimen/dp_10"
+            android:text="价格"
+            android:textColor="@drawable/tiaojian_tv_selector"
+            android:textSize="@dimen/sp_14"
+            />
+
+        <View
+            android:id="@+id/v_jiage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@drawable/tiaojian_indicator_selector"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <!--android:drawableRight="@drawable/btn_tiaojian_img_down_selector"-->
+        <TextView
+            android:id="@+id/tv_xiaoliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:text="销量"
+
+            android:textColor="@drawable/tiaojian_tv_selector"
+            android:textSize="@dimen/sp_14"
+            />
+
+        <View
+            android:id="@+id/v_xiaoliang"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@drawable/tiaojian_indicator_selector"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_shouyi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <!--android:drawableRight="@drawable/btn_tiaojian_img_down_selector"-->
+        <TextView
+            android:id="@+id/tv_shouyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:text="收益"
+
+            android:textColor="@drawable/tiaojian_tv_selector"
+            android:textSize="@dimen/sp_14"
+            />
+
+        <View
+            android:id="@+id/v_shouyi"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@drawable/tiaojian_indicator_selector"
+            />
+
+    </LinearLayout>
+
+    <!--筛选被隐藏-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/tv_shaixuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/btn_tiaojian_shaixuan"
+            android:padding="@dimen/dp_10"
+            android:text="筛选"
+            android:textColor="@drawable/tiaojian_tv_selector"
+            android:textSize="@dimen/sp_14"
+            />
+
+        <View
+            android:id="@+id/v_shaixuan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@drawable/tiaojian_indicator_selector"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/iv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tiaojian_single"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

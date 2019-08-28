@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_contest"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/c_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/content"
+        />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+
+        <TextView
+            android:id="@+id/main_item0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/main_btn_item0"
+            android:gravity="center"
+            android:paddingTop="7dp"
+            android:selectAllOnFocus="true"
+            android:text="@string/tab_nav_item0"
+            android:textColor="@drawable/main_button_color"
+            android:textSize="10dp"
+            />
+
+        <TextView
+            android:id="@+id/main_item1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/main_btn_item1"
+            android:gravity="center"
+            android:paddingTop="7dp"
+            android:text="@string/tab_nav_item1"
+            android:textColor="@drawable/main_button_color"
+            android:textSize="10dp"
+            />
+
+
+        <TextView
+            android:id="@+id/main_item2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/main_btn_item2"
+            android:gravity="center"
+            android:paddingTop="7dp"
+            android:text="@string/tab_nav_item2"
+            android:textColor="@drawable/main_button_color"
+            android:textSize="10dp"
+            />
+
+
+        <TextView
+            android:id="@+id/main_item3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/main_btn_item3"
+            android:gravity="center"
+            android:paddingTop="7dp"
+            android:text="@string/tab_nav_item3"
+            android:textColor="@drawable/main_button_color"
+            android:textSize="10dp"
+            />
+
+
+        <TextView
+            android:id="@+id/main_item4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/main_btn_item4"
+            android:gravity="center"
+            android:paddingTop="7dp"
+            android:text="@string/tab_nav_item4"
+            android:textColor="@drawable/main_button_color"
+            android:textSize="10dp"
+            />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

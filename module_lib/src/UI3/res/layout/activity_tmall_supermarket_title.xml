@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="java.com.lechuang.module.set.VerifyActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_173">
+
+        <com.zhouwei.mzbanner.MZBannerView
+            android:id="@+id/banner_all"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_173"
+            app:canLoop="true"
+            app:indicatorAlign="center"
+            app:indicatorPaddingLeft="@dimen/dp_10"
+            app:open_mz_mode="false"
+            app:open_mz_mode_ex="false" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_try_zhongjiang"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/dp_39"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:background="#5AFFFFFF"-->
+            <!--android:gravity="center"-->
+            <!--android:text=""-->
+            <!--android:textColor="@color/c_FE3F47"-->
+            <!--android:textSize="@dimen/dp_12" />-->
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_107"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_tianmao"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_41"
+                android:layout_height="@dimen/dp_41"
+                android:background="@drawable/iv_tmallsupermarket_tianmaochaoshi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="天猫超市"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_loudong"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_41"
+                android:layout_height="@dimen/dp_41"
+                android:background="@drawable/iv_tmallsupermarket_loudongdan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="漏洞单"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_haojuan"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/dp_14"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_41"
+                android:layout_height="@dimen/dp_41"
+                android:background="@drawable/iv_tmallsupermarket_haojuan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="好劵专区"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp_12" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_change"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/c_F4F4F4"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_14"
+        android:text="天猫超市"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dp_17" />
+
+</LinearLayout>

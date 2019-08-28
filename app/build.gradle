@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        multiDexEnabled true
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "plagiarism"
+
+        it.manifestPlaceholders = [
+                JPUSH_PKGNAME: rootProject.ext.android.applicationId,
+                JPUSH_APPKEY : rootProject.ext.base_field.jiGuang, //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            if (output.outputFile != null && output.outputFile.name.endsWith('.apk')
+                    && 'release'.equals(variant.buildType.name)) {
+                //as3.0之后，这里的一段需要修改成这样
+                output.outputFileName = "正式版_${variant.flavorName}_Alia${rootProject.ext.android.appAliaName}_v${variant.versionName}_${rootProject.ext.android.buildTime}.apk"
+
+            } else if (output.outputFile != null && output.outputFile.name.endsWith('.apk')
+                    && 'debug'.equals(variant.buildType.name)) {
+                //as3.0之后，这里的一段需要修改成这样
+                output.outputFileName = "测试版_${variant.flavorName}_Alia${rootProject.ext.android.appAliaName}_v${variant.versionName}_${rootProject.ext.android.buildTime}.apk"
+            }
+        }
+    }
+
+    //签名
+    signingConfigs {
+        taomimi {
+            //签名地址
+            storeFile file("\\jks\\taomimi.jks")
+            //签名的密码
+            storePassword "123456"
+            //别名
+            keyAlias "taomimi"
+            //别名的密码
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources false
+            signingConfig signingConfigs.taomimi
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources false
+            signingConfig signingConfigs.taomimi
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        taomimi {
+            //统一配置
+            applicationId rootProject.ext.android.applicationId
+            versionCode rootProject.ext.android.versionCode
+            versionName rootProject.ext.android.versionName
+            it.resValue "string", "app_name_res", rootProject.ext.android.appName
+        }
+    }
+
+    configurations.all {
+        //不知道为啥，不能删
+        //删了就报错，说test引用的包和app依赖的包版本不同
+        resolutionStrategy.force rootProject.ext.dependencies.resolutionStrategy
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs', rootProject.ext.common_libs
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':common_lib')
+    if (!isModule.toBoolean()) {
+        implementation project(':main_lib')
+        implementation project(':login_lib')
+        implementation project(':shouye_lib')
+        implementation project(':zhaoquan_lib')
+        implementation project(':mine_lib')
+        implementation project(':fenlei_lib')
+        implementation project(':home_lib')
+        implementation project(':zhibo_lib')
+        implementation project(':module_lib')
+        implementation project(':brand_lib')
+    }
+//    是否哈佛啥技术开发就
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.2'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
+    // Optional, if you use support library fragments:
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.2'
+}

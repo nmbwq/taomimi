@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Mzbanner/Mzbanner.iml" filepath="$PROJECT_DIR$/Mzbanner/Mzbanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ushare/Ushare.iml" filepath="$PROJECT_DIR$/Ushare/Ushare.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bannerlib/bannerlib.iml" filepath="$PROJECT_DIR$/bannerlib/bannerlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/brand_lib/brand_lib.iml" filepath="$PROJECT_DIR$/brand_lib/brand_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common_lib/common_lib.iml" filepath="$PROJECT_DIR$/common_lib/common_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fenlei_lib/fenlei_lib.iml" filepath="$PROJECT_DIR$/fenlei_lib/fenlei_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/home_lib/home_lib.iml" filepath="$PROJECT_DIR$/home_lib/home_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/login_lib/login_lib.iml" filepath="$PROJECT_DIR$/login_lib/login_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main_lib/main_lib.iml" filepath="$PROJECT_DIR$/main_lib/main_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mine_lib/mine_lib.iml" filepath="$PROJECT_DIR$/mine_lib/mine_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_lib/module_lib.iml" filepath="$PROJECT_DIR$/module_lib/module_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shengqianshou.iml" filepath="$PROJECT_DIR$/shengqianshou.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shouye_lib/shouye_lib.iml" filepath="$PROJECT_DIR$/shouye_lib/shouye_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhaoquan_lib/zhaoquan_lib.iml" filepath="$PROJECT_DIR$/zhaoquan_lib/zhaoquan_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhibo_lib/zhibo_lib.iml" filepath="$PROJECT_DIR$/zhibo_lib/zhibo_lib.iml" />
+    </modules>
+  </component>
+</project>

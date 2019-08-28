@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom_share"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <include layout="@layout/common_header"/>
+
+                <!--头部奖励-->
+                <LinearLayout
+                    android:id="@+id/ll_preshare_award_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_33"
+                    android:background="@color/c_F13B3A"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_9"
+                        android:src="@drawable/ic_preshare_jiangli"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_preshare_award"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:layout_weight="1"
+                        android:text="奖励佣金预估 ¥0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_12"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/ll_preshare_rule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_20"
+                            android:gravity="right"
+                            android:text="规则"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_12"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp_1"
+                            android:layout_marginRight="@dimen/dp_8"
+                            android:src="@drawable/ic_preshare_guize"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_selecter_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="选择图片"
+                        android:textColor="@color/c_main_text"
+                        android:textSize="@dimen/sp_14"
+                        android:padding="@dimen/dp_10"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_reload_preshare_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="重新制作二维码主图>>"
+                        android:layout_toRightOf="@+id/tv_selecter_img"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:padding="@dimen/dp_10"
+                        android:textColor="#F13B3A"
+                        android:textSize="@dimen/sp_14"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_preshare_select_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="已选0张"
+                        android:textColor="@color/c_main_text"
+                        android:textSize="@dimen/sp_14"
+                        android:padding="@dimen/dp_10"
+                        />
+
+                </RelativeLayout>
+
+                <!--展示选择的图片-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_preshare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="编辑分享文案"
+                    android:textColor="@color/c_main_text"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    />
+
+                <!--编辑文案-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="@drawable/bg_preshare_et"
+                    android:padding="@dimen/dp_10"
+                    >
+
+                    <EditText
+                        android:id="@+id/et_preshare_cliptext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="left|top"
+                        android:hint="分享文案"
+                        android:lineSpacingMultiplier="1.2"
+                        android:textColor="@color/c_666666"
+                        android:textColorHint="@color/c_cccccc"
+                        android:textCursorDrawable="@drawable/cursor_preshare_color"
+                        android:textSize="@dimen/sp_14"
+                        />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_m_5"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="请不要更改·{}·之间的文字"
+                        android:textColor="@color/c_9B9B9B"
+                        android:textSize="@dimen/sp_14"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_preshare_copy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:drawableLeft="@drawable/ic_preshare_copy"
+                        android:text="仅复制分享文案"
+                        android:textColor="@color/c_main"
+                        android:textSize="@dimen/sp_14"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@color/c_F4F4F4"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:gravity="center"
+                    android:text="分享图文到"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_preshare_mshare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/bg_preshare_btn_share"
+                android:gravity="center"
+                android:padding="@dimen/dp_10"
+                android:text="一键分享"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                >
+
+                <TextView
+                    android:id="@+id/share_weixin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:drawableTop="@drawable/ic_share_app_wx"
+                    android:gravity="center"
+                    android:text="微信"
+                    android:textColor="#484848"
+                    />
+
+                <TextView
+                    android:id="@+id/share_friends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:drawableTop="@drawable/ic_share_app_friends"
+                    android:gravity="center"
+                    android:text="朋友圈"
+                    android:textColor="#484848"
+                    />
+
+                <TextView
+                    android:id="@+id/share_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:drawableTop="@drawable/ic_share_app_qq"
+                    android:gravity="center"
+                    android:text="QQ"
+                    android:textColor="#484848"
+                    />
+
+                <TextView
+                    android:id="@+id/share_qq_kongjian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:drawableTop="@drawable/ic_share_app_qqkj"
+                    android:gravity="center"
+                    android:text="QQ空间"
+                    android:textColor="#484848"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--用于分享的view-->
+    <include
+        layout="@layout/layout_preshare_bitmap"
+        android:visibility="invisible"
+        />
+
+</FrameLayout>
+

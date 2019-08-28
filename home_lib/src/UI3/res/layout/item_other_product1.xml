@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:le="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+<View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_12"
+    android:background="@color/white"/>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/dp_5"
+        app:cardElevation="@dimen/dp_0"
+        app:cardPreventCornerOverlap="false"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_120"
+            android:orientation="horizontal"
+            >
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_5"
+                app:cardCornerRadius="@dimen/dp_5"
+                app:cardPreventCornerOverlap="false"
+                app:cardElevation="@dimen/dp_0"
+                >
+
+                <FrameLayout
+                    android:layout_width="@dimen/dp_120"
+                    android:layout_height="@dimen/dp_120"
+                    android:orientation="vertical"
+                    >
+
+                    <com.common.app.view.SquareImageView
+                        android:id="@+id/iv_item_other_product_tupian"
+                        android:layout_width="@dimen/dp_120"
+                        android:layout_height="wrap_content"
+                        />
+                    <ImageView
+                        android:id="@+id/iv_video"
+                        android:layout_width="@dimen/dp_36"
+                        android:layout_height="@dimen/dp_36"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:background="@drawable/ic_video"/>
+
+                    <TextView
+                        android:id="@+id/tv_item_other_product_butie_yongjin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/c_main"
+                        android:gravity="center"
+                        android:text="补贴佣金  ¥0.00"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        />
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                >
+
+                <com.common.app.view.SpannelTextViewMore
+                    android:id="@+id/tv_item_other_product_biaoti"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="12sp"
+                    le:drawText="hhhh"
+                    le:shopType="1"
+                    />
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_item_other_product_quan_txt"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/tv_item_other_product_biaoti"-->
+                    <!--android:background="@drawable/bg_product_quan_head"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="券"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:textSize="@dimen/sp_10"-->
+                    <!--/>-->
+
+                <TextView
+                    android:id="@+id/tv_item_other_product_quan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_item_other_product_biaoti"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@drawable/bg_product_quan"
+                    android:gravity="center"
+                    android:text="¥0.0  "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_10"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_item_other_product_xiaoliang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_item_other_product_biaoti"
+                    android:layout_marginTop="@dimen/dp_m_2"
+                    android:layout_toRightOf="@+id/tv_item_other_product_quan"
+                    android:text="xx.xx人购买"
+                    android:textColor="@color/c_999999"
+                    android:textSize="@dimen/sp_12"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_item_other_product_yuanjia_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_item_other_product_xiaoliang"
+                    android:gravity="center"
+                    android:text="xx价"
+                    android:textColor="@color/c_999999"
+                    android:textSize="@dimen/sp_12"
+                    android:visibility="gone"
+                    />
+
+                <!--现价 ==  券后价-->
+                <TextView
+                    android:id="@+id/tv_item_other_product_xianjia_qian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tv_item_other_single_yugu_yongjin"
+                    android:layout_marginBottom="@dimen/dp_2"
+                    android:text="¥"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/sp_12"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_item_other_product_xianjia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tv_item_other_single_yugu_yongjin"
+                    android:layout_toRightOf="@+id/tv_item_other_product_xianjia_qian"
+                    android:text="100"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/sp_18"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_item_other_product_yuanjia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tv_item_other_single_yugu_yongjin"
+                    android:layout_marginBottom="@dimen/dp_2"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_toRightOf="@+id/tv_item_other_product_xianjia"
+                    android:text="¥0.0"
+                    android:textColor="@color/c_999999"
+                    android:textSize="@dimen/sp_12"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_item_other_single_sheng_yongjin"
+                    android:layout_width="@dimen/dp_82"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_toRightOf="@+id/tv_item_other_single_yugu_yongjin"
+                    android:background="@drawable/ic_product_zhuan_single_top"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="升级赚"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_10"
+                    android:visibility="invisible"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tv_item_other_single_yugu_yongjin"
+                    android:layout_width="@dimen/dp_82"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/ic_product_zhuan_single_bottom"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="预计赚"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_10"
+                    />
+
+
+                <!-- <LinearLayout
+                     android:id="@+id/tv_item_other_zhuan_double_parent"
+                     android:layout_width="wrap_content"
+                     android:layout_height="@dimen/dp_50"
+                     android:layout_alignParentBottom="true"
+                     android:layout_alignParentRight="true"
+                     android:background="@drawable/bg_product_zhuan"
+                     android:gravity="center"
+                     android:orientation="vertical"
+                     android:visibility="gone"
+                     >
+
+                     <TextView
+                         android:id="@+id/tv_item_other_double_sheng_yongjin"
+                         android:layout_width="@dimen/dp_100"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:ellipsize="end"
+                         android:gravity="center"
+                         android:maxLines="1"
+                         android:text="升级赚0"
+                         android:textColor="@color/c_main"
+                         android:textSize="@dimen/sp_11"
+                         />
+
+                     <TextView
+                         android:id="@+id/tv_item_other_double_yugu_yongjin"
+                         android:layout_width="@dimen/dp_100"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:ellipsize="end"
+                         android:gravity="center"
+                         android:maxLines="1"
+                         android:text="预计赚0.0"
+                         android:textColor="@color/white"
+                         android:textSize="@dimen/sp_11"
+                         />
+
+                 </LinearLayout>-->
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_12"
+        android:background="@color/white"/>
+    <View
+        android:id="@+id/botton_line"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_12"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_alignParentBottom="true"
+        android:background="@color/c_EEEEEE"
+        />
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.lechuang.login"
+    >
+
+    <application
+        android:name="java.debug.LoginApplacation"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppBaseTheme"
+        >
+        <activity android:name="java.com.lechuang.login.OldLoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="java.com.lechuang.login.FindPsdActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+    </application>
+
+</manifest>

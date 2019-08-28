@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.common.app.view.SquareImageView
+        android:id="@+id/iv_item_all_product_tupian"
+        android:layout_width="@dimen/dp_44"
+        android:layout_height="@dimen/dp_44"
+        android:layout_marginLeft="@dimen/dp_17"
+        android:layout_marginTop="@dimen/dp_8" />
+
+    <LinearLayout
+        android:id="@+id/ll_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_11"
+        android:layout_marginTop="@dimen/dp_9"
+        android:layout_toRightOf="@+id/iv_item_all_product_tupian"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_item_fans_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/c_3C3C3C"
+            android:textSize="@dimen/dp_12" />
+        <!--会员-->
+        <ImageView
+            android:id="@+id/iv_item_fans_vip"
+            android:layout_width="@dimen/dp_53"
+            android:layout_height="@dimen/dp_13"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:background="@drawable/img_fans_common" />
+    </LinearLayout>
+    <!--店名-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginTop="@dimen/dp_1"
+        android:layout_toRightOf="@+id/iv_item_all_product_tupian"
+        android:layout_below="@+id/ll_up"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <!--手机号-->
+        <TextView
+            android:id="@+id/tv_item_fans_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp_11"
+            android:textColor="@color/c_666666"
+            android:text="" />
+
+        <!--日期-->
+        <TextView
+            android:id="@+id/tv_item_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_fans_username"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:textSize="@dimen/dp_11"
+            android:textColor="@color/c_666666"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_fans_person"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_25"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/item_fans_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推荐1人"
+            android:textColor="@color/c_F13B3A"
+            android:textSize="@dimen/dp_11"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_9"
+            android:layout_marginLeft="@dimen/dp_3"
+            android:background="@drawable/ic_fans_redjiantou"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_below="@+id/iv_item_all_product_tupian"
+        android:background="@color/c_D9D9D9"/>
+</RelativeLayout>

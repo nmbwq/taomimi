@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_FD5924">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_25"
+            android:id="@+id/tv_status_bar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_common_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingRight="@dimen/dp_10">
+            <!--返回按钮-->
+            <ImageView
+                android:id="@+id/iv_common_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/ic_common_back" />
+
+            <!--标题-->
+            <TextView
+                android:id="@+id/iv_common_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:text="title"
+                android:textColor="@color/c_2F2F2F"
+                android:textSize="@dimen/dp_17" />
+            <!--右面文字占位-->
+            <TextView
+                android:id="@+id/tv_common_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_5"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="抢购记录"
+                android:textColor="@color/c_2F2F2F"
+                android:textSize="@dimen/dp_12"
+                />
+        </RelativeLayout>
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/dp_1"-->
+            <!--android:background="@color/c_EEEEEE" />-->
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_fensi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_title"
+        app:srlDragRate="0.5"
+        app:srlEnableAutoLoadMore="true"
+        app:srlFooterHeight="@dimen/dp_25"
+        app:srlFooterTriggerRate="1"
+        app:srlHeaderHeight="@dimen/dp_40"
+        app:srlHeaderTriggerRate="1">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:id="@+id/smart_fensi_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlDrawableArrowSize="@dimen/sp_14"
+            app:srlEnableLastTime="true"
+            app:srlTextSizeTitle="@dimen/sp_14"
+            app:srlAccentColor="@color/white"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_mytry"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/c_FD5924"/>
+                <!--<com.github.jdsjlzx.recyclerview.LRecyclerView-->
+                    <!--android:id="@+id/rv_mytry"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"/>-->
+                <include layout="@layout/layout_common_net_error"/>
+
+        </FrameLayout>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:id="@+id/smart_fensi_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlDrawableArrowSize="@dimen/sp_14"
+            app:srlTextSizeTitle="@dimen/sp_14"
+            app:srlAccentColor="@color/white"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</RelativeLayout>

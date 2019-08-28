@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center">
+    <!--最外层为父布局，设置为透明背景，沾满整个屏幕-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="@dimen/dp_50"
+        android:background="@drawable/common_dialog_bg"
+        >
+        <!--对话框的内容在改LinearLayout中进行布局-->
+
+
+
+        <!--布局start-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:orientation="vertical"
+            android:minHeight="@dimen/dp_100"
+            android:paddingTop="@dimen/dp_5"
+            >
+            <TextView
+                android:id="@+id/tv_dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/sp_18"
+                android:textColor="@color/black"
+                android:text="提示"
+                />
+            <TextView
+                android:id="@+id/tv_dialog_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_main_text"
+                android:gravity="center"
+                android:textSize="@dimen/sp_14"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/c_line"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="@dimen/sp_10"
+            android:layout_marginLeft="@dimen/sp_10"
+            >
+            <TextView
+                android:id="@+id/tv_dialog_sure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:padding="@dimen/dp_10"
+                android:layout_weight="1"
+                android:textColor="@color/c_main_text"
+                android:gravity="center"
+                android:textSize="@dimen/sp_16"
+                android:text="确定"
+                />
+
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:background="@color/c_line"
+                />
+
+            <TextView
+                android:id="@+id/tv_dialog_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:padding="@dimen/dp_10"
+                android:layout_weight="1"
+                android:textColor="@color/c_main_text"
+                android:gravity="center"
+                android:textSize="@dimen/sp_16"
+                android:text="取消"
+                />
+
+        </LinearLayout>
+
+        <!--布局end-->
+    </LinearLayout>
+</RelativeLayout>

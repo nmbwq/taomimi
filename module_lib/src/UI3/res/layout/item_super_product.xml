@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_super_item">
+
+    <com.common.app.view.SquareImageView
+        android:id="@+id/iv_super_icon"
+        android:layout_width="@dimen/dp_43"
+        android:layout_height="@dimen/dp_43"
+        android:layout_marginTop="@dimen/dp_19"
+        android:layout_centerHorizontal="true"
+        />
+    <!--<ImageView
+        android:id="@+id/iv_super_icon"
+        android:layout_width="@dimen/dp_43"
+        android:layout_height="@dimen/dp_43"
+        android:background="@drawable/iv_common_xiaoxi"/>-->
+    <TextView
+        android:id="@+id/tv_super_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_super_icon"
+        android:layout_centerHorizontal="true"
+        android:textColor="#343434"
+        android:textSize="@dimen/dp_11"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/tv_super_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_super_name"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_centerHorizontal="true"
+        android:textColor="#AEAEAE"
+        android:textSize="@dimen/dp_8"
+        android:text=""/>
+
+    <!--<View
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="@dimen/dp_100"
+        android:layout_alignParentRight="true"
+        android:background="@color/c_F4F4F4"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_alignParentBottom="true"
+        android:background="@color/c_F4F4F4"/>-->
+
+
+</RelativeLayout>

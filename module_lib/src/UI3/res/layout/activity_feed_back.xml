@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_F6F6F6"
+    android:orientation="vertical"
+    tools:context="java.com.lechuang.module.feedback.FeedBackActivity">
+    <include layout="@layout/common_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="@color/c_F6F6F6"
+        android:padding="@dimen/dp_10">
+
+        <EditText
+            android:id="@+id/et_opinion"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_150"
+            android:background="@color/c_FFFFFF"
+            android:gravity="top"
+            android:hint="请描述你要反馈的问题..."
+            android:textCursorDrawable="@drawable/editcursor_solid_red_size2"
+            android:padding="12dp" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_19"
+        android:text="点击添加图片"/>
+</LinearLayout>

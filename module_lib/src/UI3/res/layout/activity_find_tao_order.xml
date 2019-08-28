@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="java.com.lechuang.module.withdrawdeposit.WithdrawDepositActivity"
+    >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:background="@color/c_F4F4F4"
+            android:id="@+id/tv_status_bar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_common_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/c_F4F4F4"
+            android:paddingRight="@dimen/dp_10"
+            >
+            <!--返回按钮-->
+            <ImageView
+                android:id="@+id/iv_common_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/ic_common_back"
+                />
+
+            <!--关闭按钮-->
+            <TextView
+                android:id="@+id/iv_common_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/iv_common_back"
+                android:padding="@dimen/dp_5"
+                android:text="关闭"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"
+                />
+
+            <!--标题-->
+            <TextView
+                android:id="@+id/iv_common_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dp_50"
+                android:layout_marginRight="@dimen/dp_95"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/c_main_text"
+                android:textSize="@dimen/sp_16"
+                />
+
+            <!--右面图片占位，不可与右面文字同时存在-->
+            <ImageView
+                android:id="@+id/iv_common_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/ic_find_tao_find_refresh"
+                android:visibility="gone"
+                />
+
+            <!--右面文字占位,不可与右面图片同时存在-->
+            <TextView
+                android:id="@+id/tv_common_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="占位"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--默认布局-->
+            <LinearLayout
+                android:id="@+id/ll_find_tao_order_page"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="218dp"
+                android:background="@color/c_F4F4F4"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginBottom="@dimen/dp_36"
+                        android:layout_marginLeft="@dimen/dp_23"
+                        android:layout_marginRight="@dimen/dp_23"
+                        android:layout_marginTop="@dimen/dp_35"
+                        android:background="@drawable/bg_find_tao_order_title_bg"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_order_num"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:inputType="number"
+                            android:hint="请输入淘宝订单编号"
+                            android:singleLine="true"
+                            android:textColor="@color/c_222222"
+                            android:textColorHint="@color/c_A3A3A2"
+                            android:textSize="@dimen/dp_13" />
+
+                        <TextView
+                            android:id="@+id/tv_find"
+                            android:layout_width="@dimen/dp_68"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_find_tao_order_btn"
+                            android:gravity="center"
+                            android:text="找回"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dp_12" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--android:layout_marginTop="@dimen/dp_20"-->
+                <!--android:layout_marginLeft="@dimen/dp_7"-->
+                <!--android:layout_marginRight="@dimen/dp_7"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:scaleType="fitXY"-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:background="@color/c_F4F4F4">
+                    <ImageView
+                        android:id="@+id/iv_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginBottom="@dimen/dp_12"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/bg_find_tao_order_img"
+                        />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginLeft="@dimen/dp_22"
+                        android:text="·  查询规则"
+                        android:textStyle="bold"
+                        android:textColor="@color/c_3D3D3D"
+                        android:textSize="@dimen/dp_12"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp_1"
+                        android:layout_marginLeft="@dimen/dp_34"
+                        android:text="1.购买人没同步的订单可通过订单查询找回; \n2.当查找人查找到订单, 并且该订单在订单库确实找不到\n归属时, 该订单归属到查找人; \n3.当有多个用户输入同一订单号, 以第一个输入人为准; \n4.已归属的订单不支持继续查询。"
+                        android:textColor="@color/c_3D3D3D"
+                        android:textSize="@dimen/dp_12"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--为null的布局-->
+            <LinearLayout
+                android:id="@+id/ll_find_tao_order_page_null"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_38"
+                        android:layout_marginBottom="@dimen/dp_35"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/bg_find_tao_order_title_null"/>
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/c_ECECEC"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_8"
+                    android:background="@color/c_F9F9F9"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/c_ECECEC"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginLeft="@dimen/dp_14"
+                    android:text="未查询到返佣的可能原因："
+                    android:textSize="@dimen/dp_12"
+                    android:textColor="@color/c_313131"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_14"
+                    android:text="1.订单有延迟，建议下单后15分钟再查询；\n2.非淘客佣金订单；\n3.不是通过淘觅觅APP下单的订单；\n4.下单时间超过15天；"
+                    android:textSize="@dimen/dp_12"
+                    android:textColor="@color/c_A3A3A2"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_find_tao_order"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="@color/white" />
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="@dimen/dp_56"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_find_tao_find_win"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_gravity="center_horizontal"
+                    android:text="找回成功"
+                    android:textSize="@dimen/dp_18"
+                    android:textColor="@color/c_52C261"/>
+                <view
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/dp_19"
+                    android:background="@color/c_ECECEC"/>
+                <view
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_8"
+                    android:background="@color/c_F9F9F9"/>
+                <view
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/c_ECECEC"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_all"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:background="@color/c_FAFAFA">
+                        <com.common.app.view.SquareImageView
+                            android:id="@+id/iv_item_all_product_tupian"
+                            android:layout_width="@dimen/dp_87"
+                            android:layout_height="@dimen/dp_87"
+                            android:layout_marginTop="@dimen/dp_3"
+                            android:layout_marginBottom="@dimen/dp_6"/>
+                        &lt;!&ndash;补贴佣金&ndash;&gt;
+                        <TextView
+                            android:id="@+id/tv_item_all_product_butie_yongjin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/c_main"
+                            android:gravity="center"
+                            android:text="补贴佣金  ¥0.00"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+                        &lt;!&ndash;店名&ndash;&gt;
+                        <TextView
+                            android:id="@+id/tv_item_all_product_biaoti"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_11"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_18"
+                            android:layout_toRightOf="@+id/iv_item_all_product_tupian"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/c_000000"
+                            android:textSize="@dimen/dp_12" />
+                        &lt;!&ndash;预估佣金+劵&ndash;&gt;
+
+
+                        <TextView
+                            android:id="@+id/tv_item_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_item_all_product_biaoti"
+                            android:layout_marginLeft="@dimen/dp_9"
+                            android:layout_marginTop="@dimen/dp_7"
+                            android:layout_toRightOf="@+id/iv_item_all_product_tupian"
+                            android:text="创建日"
+                            android:textColor="@color/c_7E7E7E"
+                            android:textSize="@dimen/dp_10" />
+
+                        <TextView
+                            android:id="@+id/tv_item_jiesuandate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_item_date"
+                            android:layout_marginLeft="@dimen/dp_9"
+                            android:layout_marginTop="@dimen/dp_7"
+                            android:layout_toRightOf="@+id/iv_item_all_product_tupian"
+                            android:text="结算日"
+                            android:textColor="@color/c_7E7E7E"
+                            android:textSize="@dimen/dp_10" />
+
+                        &lt;!&ndash;现价 ==  券后价&ndash;&gt;
+
+                        &lt;!&ndash;原价+销量&ndash;&gt;
+                        <RelativeLayout
+                            android:id="@+id/ll_item_jine"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_item_jiesuandate"
+                            android:layout_marginTop="@dimen/dp_9"
+                            android:layout_marginLeft="@dimen/dp_9"
+                            android:layout_toRightOf="@+id/iv_item_all_product_tupian"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_item_all_product_yuanjia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="¥0.0"
+                                android:textColor="@color/c_222222"
+                                android:textSize="@dimen/dp_10" />
+
+                            <TextView
+                                android:id="@+id/tv_item_all_product_xiaoliang"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="@dimen/dp_11"
+                                android:text="月销0"
+                                android:textColor="@color/c_FE3F47"
+                                android:textSize="@dimen/dp_10" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_order_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_all"
+                        android:layout_marginTop="@dimen/dp_7"
+                        android:text=" 已付款 "
+                        android:textColor="@color/c_FF0000"
+                        android:textSize="@dimen/dp_10"
+                        android:background="@drawable/bg_order_btnyfk"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/ll_order_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_all"
+                        android:layout_marginLeft="@dimen/dp_7"
+                        android:layout_marginTop="@dimen/dp_7"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/tv_item_order_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="订单号 2000000000"
+                            android:textColor="@color/c_7E7E7E"
+                            android:textSize="@dimen/dp_10" />
+                        <TextView
+                            android:id="@+id/tv_order_copy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_5"
+                            android:text="   复制   "
+                            android:textColor="@color/c_FFFFFF"
+                            android:textSize="@dimen/dp_10"
+                            android:background="@drawable/bg_order_btnf13"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/tv_order_state"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:background="@color/c_D9D9D9"/>
+
+                </RelativeLayout>
+            </LinearLayout>-->
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+</LinearLayout>

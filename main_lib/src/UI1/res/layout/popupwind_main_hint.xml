@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/transparent">
+
+    <ImageView
+        android:id="@+id/ll_qqkong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_60"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_finish"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_below="@+id/ll_qqkong"
+        android:layout_marginTop="@dimen/dp_34"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/bg_mycard_x"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:le="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_130"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp_5"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        >
+
+        <FrameLayout
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_120"
+            >
+
+            <com.common.app.view.SquareImageView
+                android:id="@+id/iv_item_product_product_tupian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <TextView
+                android:id="@+id/tv_item_product_product_butie_yongjin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/c_main"
+                android:gravity="center"
+                android:text="补贴佣金  ¥0.00"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                />
+        </FrameLayout>
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_5"
+        >
+
+        <com.common.app.view.SpannelTextViewSinge
+            android:id="@+id/tv_item_product_product_biaoti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="12sp"
+            le:drawText="hhhh"
+            le:shopType="1"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_product_product_xiaoliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_product_product_biaoti"
+            android:gravity="center"
+            android:text="月销0"
+            android:textColor="@color/c_999999"
+            android:textSize="@dimen/sp_12"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_product_product_yuanjia_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_product_product_xiaoliang"
+            android:gravity="center"
+            android:text="xx价"
+            android:textColor="@color/c_999999"
+            android:textSize="@dimen/sp_12"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_product_product_yuanjia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_product_product_xiaoliang"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/tv_item_product_product_yuanjia_type"
+            android:text="¥0.0"
+            android:textColor="@color/c_999999"
+            android:textSize="@dimen/sp_12"
+            />
+
+        <!--现价 ==  券后价-->
+        <TextView
+            android:id="@+id/tv_item_product_product_xianjia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_item_product_product_quan"
+            android:text="¥100"
+            android:textColor="@color/c_main"
+            android:textSize="@dimen/sp_18"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_product_product_quan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_product_quan"
+            android:gravity="center"
+            android:text="¥0.0  "
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_product_product_single_sheng_yongjin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_product_zhuan_single_top"
+            android:gravity="center"
+            android:text="升级赚"
+            android:textColor="@color/c_main"
+            android:textSize="@dimen/sp_11"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_item__product_product_single_yugu_yongjin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_product_zhuan_single_bottom"
+            android:gravity="center"
+            android:text="预计赚"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            android:visibility="gone"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/tv_item_product_product_zhuan_double_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_product_zhuan"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_3"
+            android:paddingRight="@dimen/dp_3"
+            >
+
+            <TextView
+                android:id="@+id/tv_item_product_product_double_sheng_yongjin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="升级赚0"
+                android:textColor="@color/c_main"
+                android:textSize="@dimen/sp_11"
+                />
+
+            <TextView
+                android:id="@+id/tv_item_product_product_double_yugu_yongjin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="预计赚0.0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_11"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

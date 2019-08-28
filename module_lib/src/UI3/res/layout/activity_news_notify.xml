@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f6f7f8"
+    android:orientation="vertical"
+    tools:context="java.com.lechuang.module.set.NewsNotifyActivity"
+    >
+
+    <include layout="@layout/common_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="接受消息通知"
+            android:textColor="@color/c_main_text"
+            />
+
+        <TextView
+            android:id="@+id/tv_notify_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开启"
+            android:textColor="@color/c_main_text"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_notify_shouyi"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="收益消息"
+            android:textColor="@color/c_main_text"
+            />
+
+        <Switch
+            android:id="@+id/switch_notify_shouyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:track="@drawable/notify_switch_track_selecter"
+            android:thumb="@drawable/notify_switch_thumb_seleter"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_notify_fans"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="新粉丝消息"
+            android:textColor="@color/c_main_text"
+            />
+
+        <Switch
+            android:id="@+id/switch_notify_fensi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:track="@drawable/notify_switch_track_selecter"
+            android:thumb="@drawable/notify_switch_thumb_seleter"
+            />
+    </LinearLayout>
+
+</LinearLayout>

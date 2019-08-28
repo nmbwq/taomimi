@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:le="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/dp_10"
+    >
+
+    <ImageView
+        android:id="@+id/iv_shoucang_select"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_gravity="center"
+        android:padding="@dimen/dp_5"
+        android:src="@drawable/bg_shoucang_quanxuan_selecter"
+        android:visibility="gone"
+        />
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp_5"
+        app:cardElevation="@dimen/dp_0"
+        app:cardPreventCornerOverlap="false"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            >
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dp_5"
+                app:cardElevation="@dimen/dp_0"
+                app:cardPreventCornerOverlap="false"
+                >
+
+                <FrameLayout
+                    android:layout_width="@dimen/dp_120"
+                    android:layout_height="@dimen/dp_120"
+                    >
+
+                    <com.common.app.view.SquareImageView
+                        android:id="@+id/iv_item_shoucang_tupian"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_video"
+                        android:layout_width="@dimen/dp_36"
+                        android:layout_height="@dimen/dp_36"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_video"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_item_shoucang_butie_yongjin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/c_main"
+                        android:gravity="center"
+                        android:text="补贴佣金  ¥0.00"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        />
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_5"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_item_shoucang_product_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <com.common.app.view.SpannelTextViewSinge
+                        android:id="@+id/tv_item_shoucang_biaoti"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textSize="12sp"
+                        le:drawText="hhhh"
+                        le:shopType="1"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_item_shoucang_yugu_yongjin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:background="@drawable/bg_item_shoucang_product_yongjin"
+                            android:text="预估佣金 ¥0.0"
+                            android:textColor="@color/c_main"
+                            android:textSize="@dimen/sp_10"
+                            android:visibility="invisible"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        >
+                        <!--现价 ==  券后价-->
+                        <TextView
+                            android:id="@+id/tv_item_shoucang_xianjia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="¥0.0"
+                            android:textColor="@color/c_999999"
+                            android:textSize="@dimen/sp_12"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_item_shoucang_quan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_shoucang_quan"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/dp_10"
+                            android:paddingRight="@dimen/dp_10"
+                            android:text="x.x元券"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_12"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_item_shoucang_product_parent1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:orientation="horizontal"
+                    >
+
+                    <!--原价-->
+                    <TextView
+                        android:id="@+id/tv_item_shoucang_yuanjia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥xx"
+                        android:textColor="@color/c_main"
+                        android:textSize="@dimen/sp_18"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_item_shoucang_xiaoliang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="月销0"
+                        android:textColor="@color/c_999999"
+                        android:textSize="@dimen/sp_12"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_item_shoucang_sx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_shoucang_sxright"
+                    android:visibility="invisible"
+                    />
+            </FrameLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

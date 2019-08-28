@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/c_70000000"
+	android:gravity="top">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dp_267"
+		android:layout_marginTop="@dimen/dp_146"
+		android:background="@drawable/ic_popu_week_signin_success_redpack"
+		android:layout_marginLeft="@dimen/dp_40"
+		android:layout_marginRight="@dimen/dp_40">
+
+		<TextView
+			android:id="@+id/tv_popu_week_signin_success_content"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="恭喜您抽中xxx"
+			android:layout_centerHorizontal="true"
+			android:layout_above="@+id/ll_popu_week_signin_success_copy_wechat"
+			android:layout_marginBottom="@dimen/dp_59"
+			android:textColor="#F5FF1F"
+			android:textSize="@dimen/sp_22"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="快去添加客服微信领取奖品吧\n超过3天未领取视为放弃哦"
+			android:layout_centerHorizontal="true"
+			android:gravity="center_horizontal"
+			android:layout_above="@+id/ll_popu_week_signin_success_copy_wechat"
+			android:layout_marginBottom="@dimen/dp_13"
+			android:textColor="@color/white"
+			android:textSize="@dimen/sp_12"/>
+
+		<!--android:background="@drawable/popupwind_mybigwhell_zhongjiang"-->
+		<LinearLayout
+			android:id="@+id/ll_popu_week_signin_success_copy_wechat"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dp_36"
+			android:layout_marginLeft="@dimen/dp_37"
+			android:layout_marginRight="@dimen/dp_37"
+			android:background="@drawable/bg_mybigwhell_btn"
+			android:layout_centerHorizontal="true"
+
+			android:gravity="center"
+			android:layout_above="@+id/tv_popu_week_signin_wechat_num" >
+
+			<ImageView
+				android:layout_width="@dimen/dp_18"
+				android:layout_height="@dimen/dp_18"
+				android:src="@drawable/ic_popu_week_signin_wechat"/>
+
+			<TextView
+				android:id="@+id/tv_week_signin_success_copy"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="复制微信并添加好友"
+				android:layout_marginLeft="@dimen/dp_5"
+				android:textColor="#864B19"
+				android:textSize="@dimen/sp_12"/>
+
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/tv_popu_week_signin_wechat_num"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/dp_12"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+            android:textSize="@dimen/dp_12"
+            android:textColor="@color/c_FFF73C"/>
+
+	</RelativeLayout>
+
+</RelativeLayout>

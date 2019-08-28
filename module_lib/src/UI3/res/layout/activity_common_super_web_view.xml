@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/common_header"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/c_D9D9D9" />
+
+    <ProgressBar
+        android:id="@+id/pb_product_info"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:max="100"
+        android:progressDrawable="@drawable/bg_progress"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <FrameLayout
+            android:id="@+id/fl_web_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <WebView
+                android:id="@+id/web_common"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                />
+
+            <TextView
+                android:id="@+id/tv_superweb_top_hint"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:background="@color/c_FFF1D7"
+                android:gravity="center"
+                android:text="请点击页面底部”一键找券查佣金”按钮"
+                android:textColor="#8B572A"
+                android:textSize="@dimen/dp_12"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rl_superweb_bottom_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_51"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/tv_super_onekey_search"
+                    android:layout_width="@dimen/dp_297"
+                    android:layout_height="@dimen/dp_36"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bg_super_btn484f66"
+                    android:gravity="center"
+                    android:text="一键找劵查佣金"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_13"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/tv_super_quan_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_30"
+                    android:layout_marginRight="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:clickable="true"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_super_web_share_zhuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_super_web_left_share_zhuan"
+                        android:drawablePadding="@dimen/dp_m_10"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:text="分享赚"
+                        android:textColor="@color/white"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_super_web_gobuy_or_quan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_super_web_quan"
+                        android:gravity="center"
+                        android:text="去购买"
+                        android:textColor="@color/white"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_super_web_quan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_super_web_right_quan"
+                        android:drawablePadding="@dimen/dp_m_10"
+                        android:gravity="center"
+                        android:paddingRight="@dimen/dp_10"
+                        android:text="领x券"
+                        android:textColor="@color/white"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </FrameLayout>
+
+        <include
+            layout="@layout/common_web_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            />
+    </FrameLayout>
+
+</LinearLayout>

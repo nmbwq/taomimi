@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="java.com.lechuang.module.set.VerifyActivity">
+
+    <include layout="@layout/common_header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/mSmartRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_title"
+            app:srlDragRate="0.5"
+            app:srlEnableAutoLoadMore="true"
+            app:srlFooterHeight="@dimen/dp_25"
+            app:srlFooterTriggerRate="1"
+            app:srlHeaderHeight="@dimen/dp_40"
+            app:srlHeaderTriggerRate="1">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:id="@+id/smart_fensi_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlDrawableArrowSize="@dimen/sp_14"
+                app:srlEnableLastTime="true"
+                app:srlTextSizeTitle="@dimen/sp_14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_mytry"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_51" />
+            </LinearLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        <ImageView
+            android:id="@+id/iv_tishi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginBottom="@dimen/dp_46"
+            android:visibility="gone"
+            android:src="@drawable/ic_try_details_tishi"/>
+
+        <LinearLayout
+            android:id="@+id/ll_fenxiang"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_51"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginRight="@dimen/dp_14"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_friend"
+                android:layout_width="@dimen/dp_65"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_share_app"
+                    android:layout_width="@dimen/dp_23"
+                    android:layout_height="@dimen/dp_21"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:src="@drawable/ic_try_fenxaing" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="分享"
+                    android:textColor="@color/c_999999"
+                    android:textSize="@dimen/dp_12" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_btn"
+                android:layout_width="0px"
+                android:layout_height="@dimen/dp_42"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_item_try_content"
+                android:gravity="center"
+                android:text="参与试用"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_15" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

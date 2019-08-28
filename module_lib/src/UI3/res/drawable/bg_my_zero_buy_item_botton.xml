@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<size
+        android:width="@dimen/dp_42"
+        android:height="@dimen/dp_24"
+        />-->
+
+    <!--<padding
+        android:bottom="@dimen/dp_10"
+        android:left="@dimen/dp_10"
+        android:right="@dimen/dp_10"
+        android:top="@dimen/dp_10"/>-->
+
+    <corners
+        android:bottomLeftRadius="@dimen/dp_5"
+        android:topLeftRadius="@dimen/dp_5"
+        android:bottomRightRadius="@dimen/dp_5"
+        android:topRightRadius="@dimen/dp_5"
+        />
+
+    <solid android:color="@color/c_FF1E32"/>
+</shape>

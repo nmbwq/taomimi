@@ -1,0 +1,189 @@
+/**
+ * 统一处理依赖问题
+ *
+ * https://github.com/zhengjirui/lingquanbao.git
+ */
+ext.systemProperties = System.properties//添加这一行接受jenkens的传值,这里可以有两种获取值的方式，如下：
+/**
+ * 方式一：
+ * System.getProperty("BASE_URL")       --传递jenkens里面对应的值
+ * 方式二：
+ * BASE_URL                             --直接写jenkens里面对应的值
+ * 看需求选择方式
+ */
+//获取服务器连接地址
+String getBaseUrl() {
+    def BASE_URL = System.getProperty("BASE_URL")
+    if (BASE_URL == null || BASE_URL.isEmpty()) {
+        BASE_URL = "https://wap.taomimi.vip/"//检查一下是非配置出错
+//        BASE_URL = "http://192.168.1.162:8889/"//张翔
+//        BASE_URL = "http://47.101.54.66:8080/"
+//        BASE_URL = "http://192.168.0.68:8889/"
+// 周翔
+//        BASE_URL = "http://192.168.0.69:8889/"
+//        BASE_URL = "http://47.101.54.66:8080/"
+//        BASE_URL = "http://192.168.0.68:8889/"
+        //能升级的请求接口
+//        BASE_URL = "http://190215-2.nat300.top/"
+    }
+    return BASE_URL
+}
+
+//获取App名称
+String getAppName() {
+    def APP_NAME = System.getProperty("APP_NAME")
+
+    if (APP_NAME == null || APP_NAME.isEmpty()) {
+        APP_NAME = "疯狂购"//默认为淘觅觅
+    }
+    return APP_NAME
+}
+
+//获取App名称别名
+String getAppAliaName() {
+    def APP_ALIA_NAME = System.getProperty("APP_ALIA_NAME")
+
+    if (APP_ALIA_NAME == null || APP_ALIA_NAME.isEmpty()) {
+        APP_ALIA_NAME = "疯狂购"//默认为淘觅觅
+    }
+    return APP_ALIA_NAME
+}
+
+//获取App版本VersionCode
+int getVersionCode() {
+    def VERSION_CODE = System.getProperty("VERSION_CODE")
+    if (VERSION_CODE == null || VERSION_CODE.isEmpty()) {
+        VERSION_CODE = 23000//默认为版本1
+    }
+    return Integer.valueOf(VERSION_CODE)
+}
+
+//获取App版本VersionName
+String getVersionName() {
+    def VERSION_NAME = System.getProperty("VERSION_NAME")
+    if (VERSION_NAME == null || VERSION_NAME.isEmpty()) {
+        VERSION_NAME = "2.3.0"//默认为1.0.0
+    }
+    return VERSION_NAME
+}
+
+//获取构建的时间 
+String getBuildTime() {
+    def BUILD_TIME = System.getProperty("BUILD_TIME")
+    if (BUILD_TIME == null || BUILD_TIME.isEmpty()) {
+        BUILD_TIME = new Date().format('yyyyMMddHHmm')
+    }
+    return BUILD_TIME
+}
+
+/**-----------以上是为jenkens自动化打包的默认配置。工具打包取默认值，jenkens打包为jenkens传递值-----------*/
+
+
+ext {
+    common_libs = projectDir.getPath() + "/common_lib/libs"
+
+    android = [
+            compileSdkVersion: 26,
+            minSdkVersion    : 16,
+            targetSdkVersion : 26,
+            applicationId    : "com.lechuang.shengqianshou",
+            versionCode      : getVersionCode(),
+            versionName      : getVersionName(),
+            appName          : getAppName(),
+            appAliaName      : getAppAliaName(),
+            buildTime        : getBuildTime(),
+            dbName           : "taomimi"//数据库名称以包的末位来确定，避免数据库重复
+
+    ]
+
+    base_field = [
+            base_url   : getBaseUrl(),
+            ali_pid    : "mm_111810781_0_0",
+//            ali_pid_key: "a01afa7a2de92116522e1cc48ad35961",
+            ali_pid_key: "ad91543d497f497b297354b8447f1edb",
+            wxAppId    : "wx2aa48aeff994d090",
+            wxAppSecret: "933c4db712f464f6b6c7249e23609be9",
+            jiGuang    : "df2f7e0c3229668bb4bdb27d"
+    ]
+
+    libsVersion = [
+            supportLibraryVersion = "26.1.0",
+            cardview = "26.1.0",
+            resolutionStrategy = "26.1.0",
+            constraint_layout = "1.1.2",
+            retrofit = "2.3.0",
+            retrofit_converter_gson = "2.3.0",
+            retrofit_adapter_rxjava2 = "2.3.0",
+            gson = "2.8.0",
+            rxandroid = "2.0.2",
+            rxjava = "2.1.8",
+            glide = "3.7.0",
+            eventbus = "3.0.0",
+            multidex = "1.0.3",
+            logging_interceptor = "3.5.0",
+            SmartRefreshLayout = "1.0.5.1",
+            banner = "1.4.10",
+            MZBannerView = "v2.0.2",
+            arouter_compiler = "1.1.4",
+            arouter_api = "1.3.1",
+            butterknife = "8.5.1",
+            greendao = "3.2.2",
+            libadapter = "1.0.0",
+            RViewAdapterHelper = "2.9.40",
+            permission = "2.0.0-rc4",
+            GreenDaoUpgradeHelper = "v2.1.0",
+            XTabLayout = "1.1.4",
+            flowlayout = "1.1.2",
+            marqueeview = "1.3.3",
+            zxing = "3.2.1",
+            PhotoView = "2.0.0",
+            jpush = "3.1.6",
+            jcore = "1.2.5",
+            hotfix = "3.2.6",
+            wechat = "+",
+//            LRecyclerView = "1.5.4.3",
+            LuckView = "0.0.1",
+            droidsonroidsgif = "1.2.15",
+    ]
+
+    dependencies = [
+            appcompat_v7            : "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion",
+            design                  : "com.android.support:design:$rootProject.supportLibraryVersion",
+            cardview                : "com.android.support:cardview-v7:$rootProject.cardview",
+            constraint_layout       : "com.android.support.constraint:constraint-layout:$rootProject.constraint_layout",
+            retrofit                : "com.squareup.retrofit2:retrofit:$rootProject.retrofit",
+            retrofit_converter_gson : "com.squareup.retrofit2:converter-gson:$rootProject.retrofit_converter_gson",
+            retrofit_adapter_rxjava2: "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofit_adapter_rxjava2",
+            gson                    : "com.google.code.gson:gson:$rootProject.gson",
+            rxandroid               : "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroid",
+            rxjava                  : "io.reactivex.rxjava2:rxjava:$rootProject.rxjava",
+            glide                   : "com.github.bumptech.glide:glide:$rootProject.glide",
+            eventbus                : "org.greenrobot:eventbus:$rootProject.eventbus",
+            multidex                : "com.android.support:multidex:$rootProject.multidex",
+            okhttp3_logging         : "com.squareup.okhttp3:logging-interceptor:$rootProject.logging_interceptor",
+            SmartRefreshLayout      : "com.scwang.smartrefresh:SmartRefreshLayout:$rootProject.SmartRefreshLayout",
+            banner                  : "com.youth.banner:banner:$rootProject.banner",
+            MZBannerView            : "com.github.pinguo-zhouwei:MZBannerView:$rootProject.MZBannerView",
+            arouter_compiler        : "com.alibaba:arouter-compiler:$rootProject.arouter_compiler",
+            arouter_api             : "com.alibaba:arouter-api:$rootProject.arouter_api",
+            resolutionStrategy      : "com.android.support:support-annotations:$rootProject.resolutionStrategy",
+            butterknife             : "com.jakewharton:butterknife:$rootProject.butterknife",
+            greendao                : "org.greenrobot:greendao:$rootProject.greendao",
+            libadapter              : "com.march.lib-adapter:lib-adapter:$rootProject.libadapter",
+            RViewAdapterHelper      : "com.github.CymChad:BaseRecyclerViewAdapterHelper:$rootProject.RViewAdapterHelper",
+            permission              : "com.yanzhenjie:permission:$rootProject.permission",
+            GreenDaoUpgradeHelper   : "com.github.yuweiguocn:GreenDaoUpgradeHelper:$rootProject.GreenDaoUpgradeHelper",
+            XTabLayout              : "com.androidkun:XTabLayout:$rootProject.XTabLayout",
+            flowlayout              : "com.hyman:flowlayout-lib:$rootProject.flowlayout",
+            marqueeview             : "com.sunfusheng:marqueeview:$rootProject.marqueeview",
+            zxing                   : "com.google.zxing:core:$rootProject.zxing",
+            PhotoView               : "com.github.chrisbanes:PhotoView:$rootProject.PhotoView",
+            jpush                   : "cn.jiguang.sdk:jpush:$rootProject.jpush",
+            jcore                   : "cn.jiguang.sdk:jcore:$rootProject.jcore",
+            hotfix                  : "com.aliyun.ams:alicloud-android-hotfix:$rootProject.hotfix",
+            wechat                  : "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:$rootProject.wechat",
+//            LRecyclerView                  : "com.github.jdsjlzx:LRecyclerView:$rootProject.LRecyclerView",
+            LuckView                  : "com.github.ideastudios:LuckView:$rootProject.LuckView",
+            droidsonroidsgif        : "pl.droidsonroids.gif:android-gif-drawable:$rootProject.droidsonroidsgif",
+    ]
+}

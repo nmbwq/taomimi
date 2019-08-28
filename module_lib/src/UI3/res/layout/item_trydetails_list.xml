@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:le="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_dibu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:id="@+id/cv_item_all"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:cardCornerRadius="@dimen/dp_5"-->
+        <!--app:cardElevation="@dimen/dp_0"-->
+        <!--app:cardPreventCornerOverlap="false">-->
+
+        <!--<FrameLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<com.common.app.view.SquareImageView-->
+                <!--android:id="@+id/iv_item_all_product_tupian"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" />-->
+            <ImageView
+                android:id="@+id/iv_item_all_product_tupian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"/>
+        <!--</FrameLayout>-->
+    <!--</android.support.v7.widget.CardView>-->
+
+
+</LinearLayout>
+

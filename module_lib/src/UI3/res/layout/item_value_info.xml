@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="@dimen/dp_23">
+
+	<TextView
+		android:id="@+id/tv_item_value_nick"
+		android:textSize="@dimen/sp_10"
+		android:textColor="@color/white"
+		android:layout_marginLeft="@dimen/dp_30"
+		android:layout_centerVertical="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+
+	<TextView
+		android:id="@+id/tv_item_value_info"
+		android:textSize="@dimen/sp_10"
+		android:textColor="@color/white"
+		android:layout_marginLeft="@dimen/dp_30"
+		android:layout_centerInParent="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+
+	<TextView
+		android:id="@+id/tv_item_value_time"
+		android:textSize="@dimen/sp_10"
+		android:textColor="@color/white"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="@dimen/dp_30"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

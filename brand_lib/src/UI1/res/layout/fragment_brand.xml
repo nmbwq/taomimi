@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_F3F5F6"
+    android:orientation="vertical"
+    >
+
+    <!--头部-->
+    <!--<include layout="@layout/common_header"/>-->
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_brand"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlDragRate="0.5"
+        app:srlEnableAutoLoadMore="true"
+        app:srlFooterHeight="@dimen/dp_25"
+        app:srlFooterTriggerRate="1"
+        app:srlHeaderHeight="@dimen/dp_40"
+        app:srlHeaderMaxDragRate="1.5"
+        app:srlHeaderTriggerRate="1"
+        app:srlReboundDuration="200"
+        >
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:id="@+id/smart_brand_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlDrawableArrowSize="@dimen/sp_14"
+            app:srlTextSizeTitle="@dimen/sp_14"
+            app:srlEnableLastTime="true"
+            />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <!--banner-->
+                <com.zhouwei.mzbanner.MZBannerView
+                    android:id="@+id/banner_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_190"
+                    android:layout_marginTop="@dimen/dp_5"
+                    app:canLoop="true"
+                    android:background="@color/c_F3F5F6"
+                    app:open_mz_mode="true"
+                    app:middle_page_cover="false"
+                    app:open_mz_mode_scaley="false"
+                    android:visibility="gone"
+                    app:open_mz_mode_ex="false"
+                    />
+
+                <!--人气推荐-->
+                <TextView
+                    android:id="@+id/tv_renqi_tuijian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="@color/c_F3F5F6"
+                    android:text="人气推荐"
+                    android:textColor="@color/c_272727"
+                    android:visibility="gone"
+                    />
+
+                <com.zhouwei.mzbanner.MZBannerView
+                    android:id="@+id/banner_brand_renqi"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_130"
+                    app:canLoop="true"
+                    app:indicatorAlign="center"
+                    app:indicatorPaddingLeft="10dp"
+                    app:open_mz_mode="false"
+                    android:visibility="gone"
+                    />
+
+                <!--品牌热卖-->
+                <TextView
+                    android:id="@+id/tv_brand_hot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/c_F3F5F6"
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="品牌热卖"
+                    android:textColor="@color/c_272727"
+                    android:visibility="gone"
+                    />
+
+                <!--品牌热卖滚动列表-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_brand_hot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:visibility="gone"
+                    />
+
+                <!--今日大牌-->
+                <LinearLayout
+                    android:id="@+id/tv_dapai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_45"
+                    android:visibility="gone"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:text="今日大牌"
+                        android:textColor="@color/c_221E1F"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一线品牌，每日推荐"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:textSize="@dimen/dp_12"
+                        android:textColor="@color/c_B2B2B2"/>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_14"
+                    android:layout_marginRight="@dimen/dp_14">
+                    <com.zhouwei.mzbanner.MZBannerView
+                        android:id="@+id/banner_brand_dapai"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_163"
+                        app:canLoop="false"
+                        app:indicatorAlign="center"
+                        app:indicatorPaddingLeft="10dp"
+                        app:open_mz_mode="false"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_brand_zuo"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_brand_you"
+                        />
+                    <RelativeLayout
+                        android:id="@+id/rl_brand_dibu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_below="@+id/banner_brand_dapai"
+                        android:background="@drawable/bg_brand_down">
+                        <TextView
+                            android:id="@+id/tv_brand_mingcheng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_0"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:text="卡贝官方旗舰店"
+                            android:textColor="@color/c_221E1F"
+                            android:textSize="@dimen/dp_13"/>
+                        <TextView
+                            android:id="@+id/tv_brand_slogan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_brand_mingcheng"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:text="8.8"
+                            android:textSize="@dimen/dp_12"
+                            android:textColor="@color/c_EF3F22"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_brand_mingcheng"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:text="折起"
+                            android:textSize="@dimen/dp_12"
+                            android:visibility="gone"
+                            android:textColor="@color/c_B2B2B2"/>
+                        <ImageView
+                            android:id="@+id/iv_brand_go"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/dp_12"
+                            android:layout_marginRight="@dimen/dp_9"
+                            android:background="@drawable/bg_brand_go"
+                            />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <!--为你精选-->
+                <!--<ImageView
+                    android:id="@+id/iv_brand_weini_jingxuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_margin="@dimen/dp_10"
+                    android:src="@drawable/img_brand_jingxuan"
+                    android:visibility="gone"
+                    />-->
+                <LinearLayout
+                    android:id="@+id/ll_brand_weini_jingxuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_46"
+                    android:visibility="gone"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:text="精选品牌"
+                        android:textSize="@dimen/dp_15"
+                        android:textColor="@color/c_221E1F"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一线品牌，每日精选"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:textSize="@dimen/dp_12"
+                        android:textColor="@color/c_B2B2B2"/>
+                </LinearLayout>
+
+                <!--产品列表-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_brand_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <include layout="@layout/layout_common_net_error"/>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:id="@+id/smart_brand_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlDrawableArrowSize="@dimen/sp_14"
+            app:srlTextSizeTitle="@dimen/sp_14"
+            />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

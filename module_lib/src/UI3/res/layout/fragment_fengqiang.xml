@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/status_view" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_fengqiang_tab_parent"
+        android:layout_marginLeft="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        >
+
+        <TextView
+            android:id="@+id/tv_fengqiang_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/bg_fengqiang_left_tab_selecter"
+            android:textColor="@drawable/bg_fengqiang_left_tab_selecter"
+            android:text="近2小时榜单"
+            />
+
+        <TextView
+            android:id="@+id/tv_fengqiang_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/bg_fengqiang_right_tab_selecter"
+            android:textColor="@drawable/bg_fengqiang_right_tab_selecter"
+            android:text="今日疯抢榜单"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/c_line" />
+
+
+</LinearLayout>

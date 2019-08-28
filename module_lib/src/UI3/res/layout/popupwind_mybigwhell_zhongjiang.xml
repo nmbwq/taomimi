@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66000000"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_281"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_mybigwhell_zhongjiang"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_127"
+            android:gravity="center_horizontal"
+            android:text="恭喜您抽中一二三四五六七八"
+            android:textSize="@dimen/dp_19"
+            android:textColor="@color/c_F5FF1F"/>
+        <TextView
+            android:id="@+id/tv_other_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_19"
+            android:text="快去添加客服微信领取奖品吧\n超过3天未领取视为放弃哦~"
+            android:textSize="@dimen/dp_12"
+            android:textColor="@color/white"/>
+        <RelativeLayout
+            android:id="@+id/rl_bigwhell_btn"
+            android:layout_width="@dimen/dp_207"
+            android:layout_height="@dimen/dp_37"
+            android:layout_marginTop="@dimen/dp_23"
+            android:gravity="center"
+            android:background="@drawable/bg_mybigwhell_btn">
+            <ImageView
+                android:id="@+id/iv_weixin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_mybigwhell_weixin"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_weixin"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="复制微信并添加好友"
+                android:textSize="@dimen/dp_12"
+                android:textColor="@color/c_864B19"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_bigwhell_weixin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text=""
+            android:textSize="@dimen/dp_12"
+            android:textColor="@color/c_FFF73C"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

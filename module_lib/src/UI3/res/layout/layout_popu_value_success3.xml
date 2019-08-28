@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/c_70000000"
+	android:gravity="center">
+
+	<android.support.v7.widget.CardView
+		android:id="@+id/card_popu_value"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dp_326"
+		android:layout_marginLeft="@dimen/dp_40"
+		android:layout_marginRight="@dimen/dp_40"
+		app:cardCornerRadius="@dimen/dp_5"
+		app:cardElevation="@dimen/dp_0"
+		app:cardPreventCornerOverlap="false">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<TextView
+				android:id="@+id/tv_popu_value_gongxi"
+				android:text="恭喜您"
+				android:textColor="#0D2F57"
+				android:textSize="@dimen/sp_20"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="@dimen/dp_24"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+
+
+			<LinearLayout
+				android:id="@+id/ll_popu_value_luode_parent"
+				android:layout_below="@+id/tv_popu_value_gongxi"
+				android:orientation="horizontal"
+				android:gravity="center"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<TextView
+					android:text="获得"
+					android:textColor="#0D2F57"
+					android:textSize="@dimen/sp_20"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<TextView
+					android:id="@+id/tv_popu_value_jiangpin"
+					android:text="xxx"
+					android:layout_marginLeft="@dimen/dp_5"
+					android:textColor="#FF5500"
+					android:textSize="@dimen/sp_20"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+
+			</LinearLayout>
+
+			<TextView
+				android:text="请在我的觅卡中查看"
+				android:textColor="@color/c_999999"
+				android:textSize="@dimen/sp_10"
+				android:layout_below="@+id/ll_popu_value_luode_parent"
+				android:layout_marginTop="@dimen/dp_5"
+				android:layout_centerHorizontal="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+
+			<android.support.v7.widget.CardView
+				app:cardCornerRadius="@dimen/dp_5"
+				app:cardElevation="@dimen/dp_0"
+				android:layout_marginTop="@dimen/dp_35"
+				android:layout_below="@+id/ll_popu_value_luode_parent"
+				app:cardPreventCornerOverlap="false"
+				android:layout_marginLeft="@dimen/dp_20"
+				android:layout_marginRight="@dimen/dp_20"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/dp_96">
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+
+					<ImageView
+						android:id="@+id/iv_popu_value_card"
+						android:scaleType="fitXY"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"/>
+
+				</RelativeLayout>
+
+			</android.support.v7.widget.CardView>
+
+			<!--去参与-->
+			<TextView
+				android:id="@+id/tv_popu_week_signin_join"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:gravity="center"
+				android:textSize="@dimen/sp_19"
+				android:textColor="@color/white"
+				android:layout_alignParentBottom="true"
+				android:layout_marginBottom="@dimen/dp_28"
+				android:layout_marginLeft="@dimen/dp_31"
+				android:layout_marginRight="@dimen/dp_31"
+				android:background="@drawable/bg_popu_week_signin_success_join"
+				android:text="知道了"/>
+
+		</RelativeLayout>
+
+	</android.support.v7.widget.CardView>
+
+	<ImageView
+		android:id="@+id/iv_popu_value_close"
+		android:layout_marginTop="@dimen/dp_20"
+		android:layout_below="@+id/card_popu_value"
+		android:layout_centerHorizontal="true"
+		android:src="@drawable/ic_withdrawdeposit_close"
+		android:visibility="gone"
+		android:layout_width="@dimen/dp_30"
+		android:layout_height="@dimen/dp_30"/>
+
+</RelativeLayout>

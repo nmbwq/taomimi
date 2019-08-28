@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F6F6F6"
+    tools:context="java.com.lechuang.module.set.FanKuiActivity"
+    >
+    <include layout="@layout/common_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_fankui_et"
+        android:layout_margin="@dimen/dp_10"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:id="@+id/et_fankui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_150"
+            android:background="@null"
+            android:textCursorDrawable="@drawable/cursor_et_color"
+            android:textColorHint="@color/c_999999"
+            android:textColor="@color/c_999999"
+            android:gravity="top"
+            android:maxLength="300"
+            android:hint="请输入反馈内容"
+            />
+        <TextView
+            android:id="@+id/tv_fankui_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/c_999999"
+            android:text="您还能输入300字"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_999999"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="点击添加图片"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:background="@color/white"
+        android:padding="@dimen/dp_5"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_fankui_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_fankui_complete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:background="@drawable/bg_setview_btn"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:text="提交"
+        />
+
+</LinearLayout>

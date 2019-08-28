@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="java.com.lechuang.module.productinfo.ProductInfoActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <include layout="@layout/status_view"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_8"
+            android:background="@color/white"/>
+
+        <ProgressBar
+            android:id="@+id/pb_product_info"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:max="100"
+            android:progressDrawable="@drawable/bg_progress"
+            />
+
+        <WebView
+            android:id="@+id/web_product_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            />
+    </LinearLayout>
+
+    <include
+        layout="@layout/common_web_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/iv_common_circle_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_25"
+        android:padding="@dimen/dp_10"
+        android:src="@drawable/ic_common_circle_back"
+        android:visibility="gone"
+        />
+
+</FrameLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center"
+	android:orientation="vertical"
+	android:background="@color/c_F6F6F6"
+	android:id="@+id/ll_net_error"
+	android:visibility="gone">
+
+	<ImageView
+		android:id="@+id/iv_common_image"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/ic_minetry_content_null"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="@dimen/sp_10"
+		android:textColor="@color/c_9B9B9B"
+		android:layout_marginTop="@dimen/dp_5"
+		android:text="心动不如行动"/>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="@dimen/sp_10"
+		android:textColor="@color/c_9B9B9B"
+		android:text="快去参加试用活动吧"/>
+
+	<TextView
+		android:id="@+id/tv_common_to_tryuser"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textColor="@color/c_F96A0E"
+		android:background="@drawable/bg_mine_try_to_tryuse"
+		android:textSize="@dimen/sp_12"
+		android:layout_marginTop="@dimen/dp_20"
+		android:text="立即前往试用"/>
+
+
+</LinearLayout>

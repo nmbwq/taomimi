@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66000000"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_278"
+        android:layout_height="@dimen/dp_256"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dp_278"
+            android:layout_height="@dimen/dp_61"
+            android:background="@drawable/bg_mycard_yellow"/>
+        <RelativeLayout
+            android:layout_width="@dimen/dp_278"
+            android:layout_height="@dimen/dp_154"
+            android:gravity="center"
+            android:background="@drawable/bg_mycard_half">
+            <TextView
+                android:id="@+id/tv_popwindow_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:gravity="center"
+                android:text="jajjalkfjlajeilfjlejslfjlserjlfjelfioeruiorutolglkdnkjfhuisyeuiruljhfkjhskgioeruiesurjessjflesjlfjesljflejslkfjselkjflesjfljesljfljselfjleksj"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_popwindow_diss"
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_mycard_x"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--<RelativeLayout
+        android:layout_width="@dimen/dp_232"
+        android:layout_height="@dimen/dp_220"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:id="@+id/iv_card_img"
+            android:layout_width="@dimen/dp_232"
+            android:layout_height="@dimen/dp_61"
+            android:background="@drawable/bg_mycard_yellow"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+            <RelativeLayout
+                android:layout_width="@dimen/dp_190"
+                android:layout_height="@dimen/dp_141"
+                android:background="@drawable/bg_myearnings_popff"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_48"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_popwindow_content1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_popwindow_title"
+                    android:gravity="center_horizontal"
+                    android:text="仅限在黄卡的有效期"
+                    android:textColor="@color/c_222222"
+                    android:textSize="@dimen/dp_16" />
+
+                <TextView
+                    android:id="@+id/tv_popwindow_content2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_popwindow_content1"
+                    android:gravity="center_horizontal"
+                    android:text="之内使用, 只用于抽奖专区。"
+                    android:textColor="@color/c_222222"
+                    android:textSize="@dimen/dp_16" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_popwindow_diss"
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_mycard_x"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>-->
+
+
+
+
+</RelativeLayout>

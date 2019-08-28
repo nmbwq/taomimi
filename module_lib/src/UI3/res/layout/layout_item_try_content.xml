@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:paddingLeft="@dimen/dp_15"
+	android:paddingRight="@dimen/dp_15"
+	android:layout_marginTop="@dimen/dp_10">
+
+	<android.support.v7.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:cardCornerRadius="@dimen/dp_5"
+		app:cardElevation="@dimen/dp_0"
+		app:cardPreventCornerOverlap="false">
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dp_150">
+
+			<android.support.v7.widget.CardView
+				android:id="@+id/card_item_try_content"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="@dimen/dp_5"
+				app:cardElevation="@dimen/dp_0"
+				android:layout_marginRight="@dimen/dp_15"
+				app:cardPreventCornerOverlap="false">
+				<ImageView
+					android:id="@+id/iv_item_try_content"
+					android:layout_width="@dimen/dp_120"
+					android:layout_height="@dimen/dp_120"
+					android:scaleType="fitXY"/>
+			</android.support.v7.widget.CardView>
+
+			<TextView
+				android:id="@+id/tv_item_try_content_name"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/dp_3"
+				android:maxLines="1"
+				android:ellipsize="end"
+				android:textSize="@dimen/sp_12"
+				android:textColor="@color/c_2F2F2F"
+				android:layout_toRightOf="@+id/card_item_try_content"/>
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/dp_5"
+				android:layout_below="@+id/tv_item_try_content_name"
+				android:layout_toRightOf="@+id/card_item_try_content">
+
+				<com.common.app.view.NumSeekBar
+					android:id="@+id/numSeek_item_try_content"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/dp_5"
+					android:layout_marginRight="@dimen/dp_80"/>
+
+				<!--开奖时间-->
+				<TextView
+					android:id="@+id/tv_item_try_content_start_reward"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:maxLines="1"
+					android:ellipsize="end"
+					android:textSize="@dimen/sp_10"
+					android:textColor="@color/c_CFCFCF"
+					/>
+
+				<!--需要多少人数-->
+				<TextView
+					android:id="@+id/tv_item_try_content_need_persion"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:maxLines="1"
+					android:ellipsize="end"
+					android:textSize="@dimen/sp_12"
+					android:textColor="@color/c_CFCFCF"
+					android:layout_marginTop="@dimen/dp_5"/>
+
+				<!--已中奖-->
+				<TextView
+					android:text="已中奖"
+					android:id="@+id/tv_item_try_content_reward_select"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:maxLines="1"
+					android:layout_marginTop="@dimen/dp_5"
+					android:ellipsize="end"
+					android:background="@drawable/bg_select_item_try_content"
+					android:textSize="@dimen/sp_10"
+					android:textColor="@color/c_FC5C20"/>
+
+			</LinearLayout>
+
+
+			<!--仅剩多少时间-->
+			<com.common.app.utils.CountDownTextView
+				android:id="@+id/tv_item_try_content_rest_time"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:maxLines="1"
+				android:ellipsize="end"
+				android:textSize="@dimen/sp_10"
+				android:textColor="@color/c_333333"
+				android:layout_marginTop="@dimen/dp_5"
+				android:layout_alignBaseline="@+id/tv_item_try_content_reward_info_or_result"
+				android:layout_toRightOf="@+id/card_item_try_content"/>
+
+			<!--预计开奖 -> 提示-->
+			<TextView
+				android:text="预计开奖时间"
+				android:id="@+id/tv_item_try_content_will_start_reward"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:maxLines="1"
+				android:ellipsize="end"
+				android:textSize="@dimen/sp_10"
+				android:textColor="@color/c_333333"
+				android:layout_alignTop="@+id/tv_item_try_content_reward_info_or_result"
+				android:layout_toRightOf="@+id/card_item_try_content"/>
+			<!--预计开奖 -> 时间-->
+			<TextView
+				android:id="@+id/tv_item_try_content_will_start_reward_time"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:maxLines="1"
+				android:ellipsize="end"
+				android:textSize="@dimen/sp_10"
+				android:textColor="@color/c_333333"
+				android:layout_below="@+id/tv_item_try_content_will_start_reward"
+				android:layout_toRightOf="@+id/card_item_try_content"/>
+
+			<!--查看详情,中奖结果-->
+			<TextView
+				android:id="@+id/tv_item_try_content_reward_info_or_result"
+				android:layout_width="@dimen/dp_71"
+				android:layout_height="@dimen/dp_24"
+				android:layout_alignParentRight="true"
+				android:layout_marginRight="@dimen/dp_15"
+				android:layout_marginBottom="@dimen/dp_5"
+				android:layout_above="@+id/v_item_try_conntent_line"
+				android:background="@drawable/bg_btn_item_try_content"
+				android:textColor="@color/white"
+				android:textSize="@dimen/sp_12"
+				android:text="查看详情"
+				android:gravity="center"/>
+
+			<View
+				android:id="@+id/v_item_try_conntent_line"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/dp_1"
+				android:background="@color/c_EEEEEE"
+				android:layout_below="@+id/card_item_try_content"/>
+
+			<!--抽奖状态-->
+			<TextView
+				android:id="@+id/tv_item_try_content_join_state"
+				android:layout_marginTop="@dimen/dp_5"
+				android:layout_below="@+id/v_item_try_conntent_line"
+				android:layout_marginLeft="@dimen/dp_8"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/sp_12"
+				android:textColor="@color/c_2F2F2F"/>
+
+			<!--试用码-->
+			<TextView
+				android:id="@+id/tv_item_try_content_trycode"
+				android:paddingTop="@dimen/dp_5"
+				android:layout_below="@+id/v_item_try_conntent_line"
+				android:layout_width="wrap_content"
+				android:paddingRight="@dimen/dp_5"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/sp_12"
+				android:layout_alignParentRight="true"
+				android:textColor="@color/c_2F2F2F"/>
+
+
+		</RelativeLayout>
+
+	</android.support.v7.widget.CardView>
+
+</FrameLayout>

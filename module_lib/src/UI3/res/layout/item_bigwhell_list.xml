@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:text="电饭煲"
+        android:textSize="@dimen/dp_14"
+        android:textColor="@color/c_2F2F2F"/>
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:text=""
+        android:textSize="@dimen/dp_12"
+        android:textColor="@color/c_B8B8B8"/>
+    <TextView
+        android:id="@+id/tv_btn"
+        android:layout_width="@dimen/dp_58"
+        android:layout_height="@dimen/dp_19"
+        android:layout_marginTop="@dimen/dp_31"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/dp_14"
+        android:background="@drawable/bg_bigwhell_record_btn_one"
+        android:text="领取奖励"
+        android:textSize="@dimen/dp_12"
+        android:textColor="@color/white"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/tv_time"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_14"
+        android:background="@color/c_D9D9D9"/>
+
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/c_FCEEE3"
+        >
+        <include layout="@layout/status_view" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_home_mimi"
+                android:layout_marginRight="@dimen/dp_10"
+                android:visibility="gone"
+                />
+            <RelativeLayout
+                android:id="@+id/tv_home_search"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/bg_home_tv_search"
+                android:layout_marginRight="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_home_search"
+                android:drawablePadding="@dimen/dp_5"
+                android:textColor="#A2A2A2"
+                android:textSize="@dimen/sp_14"
+                android:text="@string/tv_common_search_hint"
+                />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_home_news_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/iv_home_xiaoxi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_home_xiaoxi"
+                    />
+                <TextView
+                    android:id="@+id/tv_home_xiaoxi"
+                    android:layout_width="@dimen/dp_8"
+                    android:layout_height="@dimen/dp_8"
+                    android:layout_alignRight="@+id/iv_home_xiaoxi"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_home_xiaoxi"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.androidkun.xtablayout.XTabLayout
+            android:id="@+id/xTablayout_home"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            app:xTabMode="scrollable"
+            app:xTabIndicatorColor="@color/c_main"
+            app:xTabIndicatorHeight="@dimen/dp_3"
+            app:xTabIndicatorWidth="@dimen/dp_20"
+            app:xTabSelectedTextColor="@color/c_main"
+            app:xTabTextColor="@color/c_404040"
+            app:xTabTextSize="@dimen/sp_16"
+            app:xTabSelectedTextSize="@dimen/sp_16"/>
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:background="@color/c_main" />-->
+
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>

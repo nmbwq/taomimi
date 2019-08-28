@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+
+        android:id="@+id/smart_home_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlDragRate="0.5"
+        app:srlEnableAutoLoadMore="true"
+        app:srlFooterHeight="@dimen/dp_25"
+        app:srlFooterTriggerRate="1"
+        app:srlHeaderHeight="@dimen/dp_40"
+        app:srlHeaderMaxDragRate="1.5"
+        app:srlHeaderTriggerRate="1"
+        app:srlReboundDuration="200"
+        >
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:id="@+id/smart_home_header_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlDrawableArrowSize="@dimen/sp_14"
+            app:srlEnableLastTime="true"
+            app:srlTextSizeTitle="@dimen/sp_14"
+            app:srlAccentColor="@color/white"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            >
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/common_web_error"
+                android:visibility="gone"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_home_all_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                />
+
+            <ImageView
+                android:id="@+id/iv_home_all_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="@dimen/dp_5"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/ic_common_top"
+                android:visibility="invisible"
+                android:layout_marginBottom="@dimen/dp_20"
+                />
+
+        </FrameLayout>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:id="@+id/smart_home_footer_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlDrawableArrowSize="@dimen/sp_14"
+            app:srlTextSizeTitle="@dimen/sp_14"
+            />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_all_bottom_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_43"
+        android:layout_gravity="bottom"
+        android:background="@color/c_B22f2f2f"
+        android:clickable="true"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:text=""
+            android:layout_marginLeft="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            />
+
+        <TextView
+            android:id="@+id/tv_all_bottom_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:text="立即登录"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/bg_home_all_login"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_4"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_10"
+            />
+
+    </FrameLayout>
+
+</FrameLayout>
+

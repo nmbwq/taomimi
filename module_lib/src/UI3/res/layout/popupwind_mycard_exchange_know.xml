@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66000000"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_252"
+        android:layout_height="@dimen/dp_122"
+        android:background="@drawable/bg_myearnings_popff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_popwindow_content1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_29"
+            android:layout_below="@+id/tv_popwindow_title"
+            android:gravity="center"
+            android:text="密钥错误, 请输入正确的CDKEY"
+            android:textColor="@color/c_222222"
+            android:textSize="@dimen/dp_16" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_45"
+            android:background="@color/c_D9D9D9"/>
+        <TextView
+            android:id="@+id/tv_popwindow_know"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/c_0040DD"
+            android:textSize="@dimen/dp_20"
+            android:padding="@dimen/dp_5"
+            android:text="知道啦" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

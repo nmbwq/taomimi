@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66000000"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_276"
+        android:layout_height="@dimen/dp_360"
+
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_signin_popno"/>
+        <LinearLayout
+            android:layout_width="@dimen/dp_276"
+            android:layout_height="@dimen/dp_173"
+            android:orientation="vertical"
+            android:background="@drawable/bg_mycard_half">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="打卡失败"
+                android:textSize="@dimen/dp_20"
+                android:textColor="#0389F2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="每日打卡时间6:00-8:00"
+                android:textSize="@dimen/dp_12"
+                android:textColor="@color/c_666666"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="已经超过最晚打卡时间了,明天加油"
+                    android:textSize="@dimen/dp_11"
+                    android:textColor="@color/c_9B9B9B"/>
+                <TextView
+                    android:id="@+id/tv_popwindow_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="您的1.00元参与金将被打卡成功瓜分"
+                    android:textSize="@dimen/dp_11"
+                    android:textColor="@color/c_9B9B9B"/>
+
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_gravity="center_horizontal"
+                android:text="08:00打卡结束后"
+                android:textSize="@dimen/dp_12"
+                android:textColor="@color/c_6F6F6F"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_gravity="center_horizontal"
+                android:text="可在打卡记录中查看瓜分金额"
+                android:textSize="@dimen/dp_12"
+                android:textColor="@color/c_6F6F6F"
+                />-->
+            <TextView
+                android:id="@+id/tv_topay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_21"
+                android:layout_marginLeft="@dimen/dp_13"
+                android:layout_marginRight="@dimen/dp_13"
+                android:gravity="center"
+                android:background="@drawable/ic_signin_yingxianjin"
+                android:text="明天继续赢现金"
+                android:textSize="@dimen/dp_16"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/iv_popwindow_diss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_mycard_x"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

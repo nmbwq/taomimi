@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.lechuang.main"
+    >
+
+    <application>
+
+        <service android:name="com.common.app.service.AppUpdataService" />
+
+        <!-- 主页 -->
+        <activity
+            android:name="java.com.lechuang.main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+
+        <!-- 启动页 -->
+        <activity
+            android:name="java.com.lechuang.main.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--广告页-->
+        <activity
+            android:name="java.com.lechuang.main.AdverActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"/>
+
+        <!--引导页-->
+        <activity
+            android:name="java.com.lechuang.main.GuideActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"/>
+    </application>
+
+</manifest>

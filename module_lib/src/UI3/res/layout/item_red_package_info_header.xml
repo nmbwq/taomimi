@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<android.support.v7.widget.CardView
+		android:layout_below="@+id/card_red_package_wanfa"
+		app:cardCornerRadius="@dimen/dp_5"
+		app:cardElevation="@dimen/dp_0"
+		android:layout_marginTop="@dimen/dp_20"
+		android:background="@color/white"
+		android:layout_marginLeft="@dimen/dp_15"
+		android:layout_marginRight="@dimen/dp_15"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dp_115">
+
+		<LinearLayout
+			android:gravity="center"
+			android:background="@drawable/bg_red_package_info_form"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+				<!--已发出-->
+				<TextView
+					android:id="@+id/tv_red_package_info_fachu"
+					android:textSize="@dimen/sp_23"
+					android:textColor="@color/white"
+					android:layout_weight="1"
+					android:text="0"
+					android:gravity="center"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+
+				<!--已使用-->
+				<TextView
+					android:id="@+id/tv_red_package_info_use"
+					android:textSize="@dimen/sp_23"
+					android:textColor="@color/white"
+					android:layout_weight="1"
+					android:text="0"
+					android:visibility="gone"
+					android:gravity="center"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+
+				<!--未使用-->
+				<TextView
+					android:id="@+id/tv_red_package_info_unuse"
+					android:textSize="@dimen/sp_23"
+					android:textColor="@color/white"
+					android:layout_weight="1"
+					android:text="0"
+					android:visibility="gone"
+					android:gravity="center"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+
+				<!--已返还-->
+				<TextView
+					android:id="@+id/tv_red_package_info_result"
+					android:textSize="@dimen/sp_23"
+					android:textColor="@color/white"
+					android:layout_weight="1"
+					android:text="0"
+					android:gravity="center"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_marginTop="@dimen/dp_5"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+				<!--已发出-->
+				<TextView
+					android:textSize="@dimen/sp_10"
+					android:textColor="@color/white"
+					android:layout_weight="1"
+					android:text="已领取(元)"
+					android:gravity="center"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+
+				<!--已使用-->
+				<TextView
+					android:textSize="@dimen/sp_10"
+					android:textColor="@color/white"
+					android:layout_weight="1"
+					android:text="已使用(元)"
+					android:visibility="gone"
+					android:gravity="center"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+
+				<!--未使用-->
+				<TextView
+					android:textSize="@dimen/sp_10"
+					android:textColor="@color/white"
+					android:layout_weight="1"
+					android:visibility="gone"
+					android:text="未使用(元)"
+					android:gravity="center"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+
+				<!--已返还-->
+				<TextView
+					android:textSize="@dimen/sp_10"
+					android:textColor="@color/white"
+					android:layout_weight="1"
+					android:text="已返还(元)"
+					android:gravity="center"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+
+
+			</LinearLayout>
+
+		</LinearLayout>
+	</android.support.v7.widget.CardView>
+
+	<TextView
+		android:id="@+id/tv_red_package_info"
+		android:layout_marginTop="@dimen/dp_20"
+		android:layout_marginLeft="@dimen/dp_15"
+		android:text="红包明细"
+		android:textSize="@dimen/sp_17"
+		android:layout_marginBottom="@dimen/dp_5"
+		android:textColor="@color/c_333333"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+
+</LinearLayout>

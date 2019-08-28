@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="java.com.lechuang.module.superentrance.SuperTutorialActivity">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll_title"
+        >
+        <include layout="@layout/status_view" />
+
+        <RelativeLayout
+            android:id="@+id/rl_common_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingRight="@dimen/dp_10"
+            >
+            <LinearLayout
+                android:id="@+id/ll_title_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true">
+                <ImageView
+                    android:id="@+id/iv_common_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_common_back"
+                    android:layout_alignParentLeft="true"
+                    android:padding="@dimen/dp_10"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="关闭"
+                    android:textSize="@dimen/dp_15"
+                    android:textColor="@color/c_161616"/>
+
+
+            </LinearLayout>
+            <!--返回按钮-->
+
+
+            <!--标题-->
+            <TextView
+                android:id="@+id/iv_common_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/c_main_text"
+                android:text="title"
+                android:maxLines="1"
+                android:maxLength="20"
+                android:ellipsize="end"
+                />
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!--NestedScrollView-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_super_tutorial" />
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/status_view"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_common_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingRight="@dimen/dp_10"
+        >
+        <!--返回按钮-->
+        <ImageView
+            android:id="@+id/iv_common_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/ic_common_back"
+            />
+
+        <!--关闭按钮-->
+        <TextView
+            android:id="@+id/iv_common_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/iv_common_back"
+            android:padding="@dimen/dp_5"
+            android:text="关闭"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone"
+            />
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/iv_common_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:layout_marginRight="@dimen/dp_95"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/c_main_text"
+            android:textSize="@dimen/sp_16"
+            />
+
+        <!--右面图片占位，不可与右面文字同时存在-->
+        <ImageView
+            android:id="@+id/iv_common_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/ic_common_back"
+            android:visibility="gone"
+            />
+
+        <!--右面文字占位,不可与右面图片同时存在-->
+        <TextView
+            android:id="@+id/tv_common_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:text="占位"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

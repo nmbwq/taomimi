@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.lechuang.module"
+    >
+
+    <application
+        android:name="java.debug.ModuleApplication"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppBaseTheme"
+        >
+
+        <!-- module 主activity -->
+        <activity
+            android:name="java.debug.ModuleActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 商品分享预览 -->
+        <activity
+            android:name="java.com.lechuang.module.productinfo.PreShareActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+
+        <!-- 粉丝 -->
+        <activity
+            android:name="java.com.lechuang.module.fensi.FenSiActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+
+        <!-- 设置  消息 -->
+        <activity
+            android:name="java.com.lechuang.module.set.NewsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <!-- 修改昵称 -->
+        <activity
+            android:name="java.com.lechuang.module.set.UpdataNickActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <!-- 身份验证 -->
+        <activity
+            android:name="java.com.lechuang.module.set.VerifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <!-- 更换手机号 -->
+        <activity
+            android:name="java.com.lechuang.module.set.UpdataPhoneActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <!-- 绑定支付宝 -->
+        <activity
+            android:name="java.com.lechuang.module.set.BindZfbActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <!-- 支付宝绑定完成 -->
+        <activity
+            android:name="java.com.lechuang.module.set.CompleteBindActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <!--更换手机号密码-->
+        <activity
+            android:name="java.com.lechuang.module.set.UpdataPsdActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+
+        <!--微信客服-->
+        <activity
+            android:name="java.com.lechuang.module.kefu.WxKeFuActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            />
+        <!--分享APP图片-->
+        <activity
+            android:name="java.com.lechuang.module.shareapp.ShareAppActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing"
+            >
+
+        </activity>
+    </application>
+
+</manifest>

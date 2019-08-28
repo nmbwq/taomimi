@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66000000"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_234"
+        android:layout_height="@dimen/dp_100"
+        android:background="@drawable/bg_myearnings_popff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_popwindow_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_below="@+id/tv_popwindow_title"
+            android:gravity="center"
+            android:text="上个月内确认收货的订单收"
+            android:textColor="@color/c_222222"
+            android:textSize="@dimen/dp_16" />
+
+        <TextView
+            android:id="@+id/tv_popwindow_know"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/c_0040DD"
+            android:textSize="@dimen/dp_14"
+            android:padding="@dimen/dp_5"
+            android:text="知道啦" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

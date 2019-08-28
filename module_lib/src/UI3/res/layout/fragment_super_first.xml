@@ -1,0 +1,17 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_super_dianshang_first_fragment"
+    android:elevation="@dimen/dp_5"
+    tools:context="java.com.lechuang.module.superentrance.SuperFirstFragment"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_super_first_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</FrameLayout>

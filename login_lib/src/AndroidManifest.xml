@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lechuang.login">
+
+    <application>
+
+        <!-- 登录 -->
+        <activity
+            android:name="java.com.lechuang.login.OldLoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 忘记密码 -->
+        <activity
+            android:name="java.com.lechuang.login.FindPsdActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 手机号登录 -->
+        <activity
+            android:name="java.com.lechuang.login.PhoneLoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 设置手机密码 -->
+        <activity
+            android:name="java.com.lechuang.login.SetPsdActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 第三方登录绑定 -->
+        <activity
+            android:name="java.com.lechuang.login.BoundActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 登录引导页 -->
+        <activity
+            android:name="java.com.lechuang.login.GuideLoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 登录页 -->
+        <activity
+            android:name="java.com.lechuang.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 注册页 -->
+        <activity
+            android:name="java.com.lechuang.login.RegistActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="java.com.lechuang.login.TextActivity"></activity>
+    </application>
+
+</manifest>

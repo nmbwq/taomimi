@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/c_20ffffff"
+	android:gravity="center">
+
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dp_370"
+	>
+		<LinearLayout
+			android:id="@+id/rl_all"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dp_322"
+			android:layout_marginLeft="@dimen/dp_40"
+			android:layout_marginRight="@dimen/dp_40"
+			android:orientation="vertical"
+			android:background="@drawable/bg_zero_buy_details_pop">
+			<TextView
+				android:id="@+id/tv_mine_try_code"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="抽奖码排行榜"
+				android:gravity="center"
+				android:layout_alignParentTop="true"
+				android:layout_gravity="center_horizontal"
+				android:textSize="@dimen/dp_19"
+				android:textColor="@color/c_0D2F57"
+				android:layout_marginTop="@dimen/dp_24"
+			/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="第一名必得商品, 其余人再抽1件"
+				android:gravity="center"
+				android:layout_alignParentTop="true"
+				android:layout_gravity="center_horizontal"
+				android:textSize="@dimen/dp_11"
+				android:textColor="@color/c_999999"
+				android:layout_marginTop="@dimen/dp_3"
+				/>
+
+			<!--<ImageView-->
+				<!--android:id="@+id/iv_mine_try_code_close"-->
+				<!--android:layout_width="@dimen/dp_20"-->
+				<!--android:layout_height="@dimen/dp_20"-->
+				<!--android:text="我"-->
+				<!--android:gravity="center"-->
+				<!--android:layout_alignParentTop="true"-->
+				<!--android:layout_alignParentRight="true"-->
+				<!--android:padding="@dimen/dp_3"-->
+				<!--android:layout_marginTop="@dimen/dp_8"-->
+				<!--android:layout_marginRight="@dimen/dp_5"-->
+				<!--android:src="@drawable/ic_common_close"/>-->
+
+			<!--<View-->
+				<!--android:id="@+id/v_mine_try_line"-->
+				<!--android:layout_width="wrap_content"-->
+				<!--android:layout_height="@dimen/dp_1"-->
+				<!--android:background="@color/c_F6F6F6"-->
+				<!--android:layout_below="@+id/tv_mine_try_code"/>-->
+
+
+			<android.support.v7.widget.RecyclerView
+				android:id="@+id/rv_mine_try_code"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/v_mine_try_line"
+				android:layout_marginTop="@dimen/dp_12"
+			/>
+		</LinearLayout>
+		<ImageView
+			android:id="@+id/iv_mine_try_code_close"
+			android:layout_width="@dimen/dp_30"
+			android:layout_height="@dimen/dp_30"
+			android:layout_below="@+id/rl_all"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="@dimen/dp_20"
+			android:background="@drawable/bg_mycard_x"/>
+
+	</RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="java.com.lechuang.module.set.NewsActivity"
+    >
+
+    <include layout="@layout/common_header"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/c_D9D9D9"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_43"
+        android:layout_marginLeft="@dimen/dp_2"
+        android:layout_marginRight="@dimen/dp_2"
+        android:background="@color/c_F6F6F6"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/tv_news_shouyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_18"
+            android:layout_toLeftOf="@+id/v_rv_center"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_14"
+            android:text="@string/s_news_shouyi"
+            android:textColor="@drawable/bg_news_tab_selecter"
+            />
+
+        <TextView
+            android:id="@+id/tv_news_shouyi_line"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/dp_45"
+            android:layout_toLeftOf="@+id/v_rv_center"
+            android:background="@drawable/bg_news_tab_selecter"
+            android:gravity="center"
+            />
+        <!--android:background="@drawable/bg_news_tab_selecter"-->
+        <View
+            android:id="@+id/v_rv_center"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="@dimen/dp_1"
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_news_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:layout_toRightOf="@+id/v_rv_center"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_14"
+            android:text="@string/s_news_other"
+            android:textColor="@drawable/bg_news_tab_selecter"
+            />
+
+        <TextView
+            android:id="@+id/tv_news_other_line"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_45"
+            android:layout_toRightOf="@+id/v_rv_center"
+            android:background="@drawable/bg_news_tab_selecter"
+            android:gravity="center"
+            android:text="@string/s_news_other"
+            />
+        <!--android:background="@drawable/bg_news_tab_selecter"-->
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_news"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlDragRate="0.5"
+        app:srlEnableAutoLoadMore="true"
+        app:srlFooterHeight="@dimen/dp_25"
+        app:srlFooterTriggerRate="1"
+        app:srlHeaderHeight="@dimen/dp_25"
+        app:srlHeaderTriggerRate="1"
+        >
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:id="@+id/smart_news_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlDrawableArrowSize="@dimen/sp_14"
+            app:srlEnableLastTime="false"
+            app:srlTextSizeTitle="@dimen/sp_14"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_news"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <include layout="@layout/layout_news_error"/>
+        </FrameLayout>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:id="@+id/smart_news_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlDrawableArrowSize="@dimen/sp_14"
+            app:srlTextSizeTitle="@dimen/sp_14"
+            />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

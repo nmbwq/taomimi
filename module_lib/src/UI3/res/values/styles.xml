@@ -1,0 +1,40 @@
+<resources>
+
+	<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>
+
+	<style name="time_dialog" parent="android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowBackground">@color/c_FFFFFF</item>
+	</style>
+	<style name="XTabLayout_Background_Style">
+		<item name="tabBackground">@drawable/tab_flashsale_background</item>
+	</style>
+
+	<style name="mineBangDanTransparent" parent="AppBaseTheme">
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowBackground">@color/c_10000000</item>
+		<item name="android:colorBackgroundCacheHint">@null</item>
+	</style>
+
+
+
+	<style name="fragment_try_code">
+		<!-- 设置允许窗口半透明 -->
+		<item name="android:windowIsTranslucent">true</item>
+		<!-- 引用Android系统的动画半透明样式 -->
+		<item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+		<!-- 设定窗口背景颜色 -->
+		<item name="android:windowBackground">@color/transparent</item>
+		<!-- 隐藏窗口标题栏 -->
+		<item name="android:windowNoTitle">true</item>
+		<!-- 设定文字前景色 -->
+		<item name="android:colorForeground">#fff</item>
+	</style>
+
+</resources>

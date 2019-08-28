@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <include layout="@layout/common_header"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/c_line"
+            />
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smart_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlDragRate="0.5"
+            app:srlEnableAutoLoadMore="true"
+            app:srlFooterHeight="@dimen/dp_25"
+            app:srlFooterTriggerRate="1"
+            app:srlHeaderHeight="@dimen/dp_40"
+            app:srlHeaderMaxDragRate="1.5"
+            app:srlHeaderTriggerRate="1"
+            app:srlReboundDuration="200"
+            >
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:id="@+id/smart_product_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlDrawableArrowSize="@dimen/sp_14"
+                app:srlEnableLastTime="true"
+                app:srlTextSizeTitle="@dimen/sp_14"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <!--<com.common.app.view.TransChangeNesScrollView-->
+                <!--android:id="@+id/nes_product"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:fillViewport="true"-->
+                <!--&gt;-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <com.zhouwei.mzbanner.MZBannerView
+                        android:id="@+id/banner_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_144"
+                        android:visibility="gone"
+                        app:canLoop="true"
+                        app:indicatorAlign="center"
+                        app:indicatorPaddingLeft="10dp"
+                        app:open_mz_mode="false"
+                        />
+
+                    <com.common.app.view.NoShouYiTiaoJian
+                        android:id="@+id/shaixuan_product_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_product"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            />
+
+                        <include layout="@layout/layout_common_net_error"/>
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <!--</com.common.app.view.TransChangeNesScrollView>-->
+
+                <!--顶部的用于悬浮状态-->
+                <com.common.app.view.NoShouYiTiaoJian
+                    android:id="@+id/shaixuan_product_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:visibility="invisible"
+                    />
+            </FrameLayout>
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:id="@+id/smart_product_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlDrawableArrowSize="@dimen/sp_14"
+                app:srlTextSizeTitle="@dimen/sp_14"
+                />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_home_all_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/dp_5"
+        android:padding="@dimen/dp_10"
+        android:src="@drawable/ic_common_top"
+        android:visibility="invisible"
+        />
+</FrameLayout>
+

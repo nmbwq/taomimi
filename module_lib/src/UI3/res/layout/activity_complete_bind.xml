@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="java.com.lechuang.module.set.VerifyActivity"
+    >
+    <include layout="@layout/common_header" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/c_D9D9D9" />
+
+    <ImageView
+        android:id="@+id/iv_bind_state"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:src="@drawable/ic_bind_complete"
+        android:layout_marginTop="@dimen/dp_53"
+        />
+
+    <TextView
+        android:id="@+id/tv_bind_zfbnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_23"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/c_main_text"
+        android:text="已绑定支付宝账号:"
+        />
+
+    <TextView
+        android:id="@+id/tv_bind_zfb_updata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:background="@drawable/bg_setview_btn"
+        android:layout_marginTop="@dimen/dp_22"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:text="换绑支付宝"
+        />
+
+</LinearLayout>

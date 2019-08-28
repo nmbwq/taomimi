@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent"
+    android:gravity="center">
+    <!--最外层为父布局，设置为透明背景，沾满整个屏幕-->
+
+    <LinearLayout
+        android:layout_margin="@dimen/dp_50"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_277"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_zhineng_bg"
+    ><!--对话框的内容在改LinearLayout中进行布局-->
+
+
+
+
+        <!--布局start-->
+
+        <ImageView
+            android:id="@+id/iv_layout_dialog_shouquan_close"
+            android:src="@drawable/ic_dialog_shouquan_close"
+            android:layout_gravity="right"
+            android:padding="@dimen/dp_10"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"/>
+
+        <ImageView
+            android:src="@drawable/ic_dialog_shouquan"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/dp_56"
+            android:layout_height="@dimen/dp_56"/>
+
+        <TextView
+            android:text="申请淘宝授权"
+            android:textSize="@dimen/sp_17"
+            android:layout_marginTop="@dimen/dp_23"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/c_161616"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="淘宝授权后购买或者分享商品才能产生佣金收益"
+            android:gravity="center"
+            android:textSize="@dimen/sp_13"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#c2c2c2"
+            android:layout_marginLeft="@dimen/dp_33"
+            android:layout_marginRight="@dimen/dp_33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_layout_dialog_go_shouquan"
+            android:text="前往淘宝授权"
+            android:gravity="center"
+            android:textSize="@dimen/sp_15"
+            android:background="@drawable/bg_layout_dialog_shouquan_btn"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"/>
+
+
+        <!--布局end-->
+    </LinearLayout>
+
+</RelativeLayout>

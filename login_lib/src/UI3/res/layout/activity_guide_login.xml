@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_bottom"
+    tools:context="java.com.lechuang.login.GuideLoginActivity"
+    >
+
+    <ImageView
+        android:id="@+id/iv_login_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:src="@drawable/bg_login_top"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_guide_login_black"
+        >
+
+        <ImageView
+            android:id="@+id/iv_common_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/ic_common_back_white"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/dp_67"
+            android:layout_height="@dimen/dp_67"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="@dimen/dp_145"
+            android:src="@drawable/ic_guide_logo"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="@dimen/dp_230"
+            android:text="选择注册/登录方式"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            />
+
+        <ImageView
+            android:id="@+id/iv_weixin_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="@dimen/dp_165"
+            android:src="@drawable/ic_guide_weixin_login"
+            />
+
+        <TextView
+            android:id="@+id/tv_other_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:padding="@dimen/dp_5"
+            android:text="使用其他方式注册/登录"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            />
+
+        <View
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="@dimen/dp_1"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="@dimen/dp_26"
+            android:background="@color/c_line"
+            />
+
+    </FrameLayout>
+
+
+</FrameLayout>

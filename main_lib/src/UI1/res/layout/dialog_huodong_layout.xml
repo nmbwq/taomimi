@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_huodong_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    >
+
+    <ImageView
+        android:id="@+id/iv_huodong"
+        android:layout_width="@dimen/dp_207"
+        android:layout_height="@dimen/dp_274"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:scaleType="fitXY"
+        />
+
+    <ImageView
+        android:id="@+id/iv_huodong_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_huodong_close"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_below="@+id/iv_huodong"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_huodong"
+        android:padding="@dimen/dp_10"
+        />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,90 @@
+if (isModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //ARouters
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+
+        it.manifestPlaceholders = [
+                JPUSH_PKGNAME: rootProject.ext.android.applicationId,
+                JPUSH_APPKEY : rootProject.ext.base_field.jiGuang, //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+    }
+
+    buildTypes {
+        release {
+            postprocessing {
+                removeUnusedCode false
+                removeUnusedResources false
+                obfuscate false
+                optimizeCode false
+                proguardFile 'proguard-rules.pro'
+            }
+        }
+    }
+
+    sourceSets {
+
+        main {
+
+            def UI = packageModule.toString()
+
+            java.srcDirs = ["src/${UI}"]
+            res.srcDirs = ["src/${UI}/res"]
+            if (isModule.toBoolean()) {
+                manifest.srcFile 'src/module/AndroidManifest.xml'
+
+
+            } else {
+                manifest.srcFile 'src/AndroidManifest.xml'
+                //集成开发模式下则需要排除debug文件夹中的所有Java文件
+                java {
+                    //使用默认的java包
+                    exclude "${UI}.java.debug/**"
+                }
+            }
+        }
+    }
+
+    configurations.all {
+        //不知道为啥，不能删
+        //删了就报错，说test引用的包和app依赖的包版本不同
+        resolutionStrategy.force rootProject.ext.dependencies.resolutionStrategy
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs', rootProject.ext.common_libs
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:support-v4:26.1.0'
+    annotationProcessor rootProject.ext.dependencies.arouter_compiler
+    implementation project(':common_lib')
+    implementation 'pub.devrel:easypermissions:0.3.0'
+    //测试上传挥洒粉红色京东方开始的
+
+}

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <!--RecyclerView-->
+
+    <com.common.app.view.TransChangeNesScrollView
+        android:id="@+id/tcnsv_super"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_vertical"
+        android:background="@color/c_F1F1F1"
+        android:fillViewport="true"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_192"
+                android:background="@drawable/bg_super_title"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/tv_super_jiaocheng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:src="@drawable/bg_jiaocheng"
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/rl_super_search"
+                    android:src="@drawable/ic_super_line"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/rl_super_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_34"
+                    android:layout_above="@+id/iv_super_arrow"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_11"
+                    android:layout_marginRight="@dimen/dp_11"
+                    android:background="@drawable/bg_super_tv_search_white"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_super_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/ic_super_search"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:text="@string/tv_super_search_hint"
+                        android:textColor="#797979"
+                        android:textSize="@dimen/sp_14"
+                        />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_super_arrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:src="@drawable/ic_super_header_arrow"
+                    />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="天猫/淘宝官方"
+                android:textColor="@color/c_2E2E2E"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_super_tianmao_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@drawable/bg_super_dianshang_product"
+                android:elevation="@dimen/dp_10"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:text="知名电商"
+                    android:textColor="@color/c_2E2E2E"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_super_dianshang_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_25"
+                    />
+            </FrameLayout>
+
+            <com.androidkun.xtablayout.XTabLayout
+                android:id="@+id/xTablayout_super_big"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_5"
+                app:xTabIndicatorColor="@color/c_main"
+                app:xTabIndicatorHeight="@dimen/dp_2"
+                app:xTabIndicatorWidth="@dimen/dp_30"
+                app:xTabMode="scrollable"
+                app:xTabSelectedTextColor="@color/c_main"
+                app:xTabSelectedTextSize="@dimen/sp_16"
+                app:xTabTextColor="@color/c_B2B2B2"
+                app:xTabTextSize="@dimen/sp_16"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                >
+
+                <com.common.app.view.MyViewPager
+                    android:id="@+id/vp_super_big"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:clipChildren="false"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    />
+            </FrameLayout>
+
+            <com.androidkun.xtablayout.XTabLayout
+                android:id="@+id/xTablayout_super_baihuo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_25"
+                app:xTabDisplayNum="2"
+                app:xTabIndicatorColor="@color/c_main"
+                app:xTabIndicatorHeight="@dimen/dp_2"
+                app:xTabMode="fixed"
+                app:xTabSelectedTextColor="@color/c_main"
+                app:xTabSelectedTextSize="@dimen/sp_13"
+                app:xTabTextColor="@color/c_B2B2B2"
+                app:xTabTextSize="@dimen/sp_13"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+
+                >
+
+                <com.common.app.view.MyViewPager
+                    android:id="@+id/vp_super_baihuo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:clipChildren="false"
+                    android:layout_marginBottom="@dimen/dp_50"
+                    />
+            </FrameLayout>
+
+        </LinearLayout>
+    </com.common.app.view.TransChangeNesScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_super_titleyinchang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <include layout="@layout/status_view"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_34"
+                android:layout_marginRight="@dimen/dp_69"
+                android:background="@drawable/bg_super_tv_search"
+                >
+
+                <TextView
+                    android:id="@+id/tv_super_searchtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_super_search"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:gravity="center"
+                    android:text="搜索商品名称或宝贝标题"
+                    android:textColor="@color/c_797979"
+                    android:textSize="@dimen/sp_14"
+                    />
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/tv_super_jiaochengtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:src="@drawable/bg_jiaochengtitle"
+                android:textColor="@color/black"
+                />
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

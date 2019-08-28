@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/c_F2F2F2"
+        android:orientation="vertical"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_25"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            >
+            <!--返回按钮-->
+            <ImageView
+                android:id="@+id/iv_common_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingLeft="@dimen/dp_10"
+                android:src="@drawable/ic_common_back"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_weight="1"
+                android:background="@drawable/bg_search_et"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/tv_search_result_channel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:drawableRight="@drawable/ic_search_arrow"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_5"
+                    android:text="APP"
+                    android:textColor="@color/c_main"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="gone"
+                    />
+                <!--android:drawableLeft="@drawable/ic_search_left_draw"-->
+                <TextView
+                    android:id="@+id/tv_search_result_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_3"
+
+                    android:drawablePadding="@dimen/dp_5"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/tv_common_search_hint"
+                    android:textColor="@color/c_515151"
+                    android:textSize="@dimen/sp_14"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.common.app.view.TiaoJianView
+            android:id="@+id/shaixuan_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#e8e8e8"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_swiper_parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search_result_rengong"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_weight="1"
+                android:text="仅显示优惠券商品"
+                android:textColor="#5e5e5e"
+                android:textSize="14sp"
+                />
+
+            <com.common.app.view.WiperSwitch
+                android:id="@+id/wiper_search_result"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                />
+
+        </LinearLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smart_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlDragRate="0.5"
+            app:srlEnableAutoLoadMore="true"
+            app:srlFooterHeight="@dimen/dp_25"
+            app:srlFooterTriggerRate="1"
+            app:srlHeaderHeight="@dimen/dp_40"
+            app:srlHeaderMaxDragRate="1.5"
+            app:srlHeaderTriggerRate="1"
+            app:srlReboundDuration="200"
+            >
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:id="@+id/smart_header_search_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlDrawableArrowSize="@dimen/sp_14"
+                app:srlEnableLastTime="true"
+                app:srlTextSizeTitle="@dimen/sp_14"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_search_result_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    />
+
+                <include layout="@layout/layout_common_net_error"/>
+
+            </FrameLayout>
+
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:id="@+id/smart_footer_search_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlDrawableArrowSize="@dimen/sp_14"
+                app:srlTextSizeTitle="@dimen/sp_14"
+                />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_home_all_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/dp_5"
+        android:padding="@dimen/dp_10"
+        android:src="@drawable/ic_common_top"
+        android:visibility="invisible"
+        />
+</FrameLayout>
+

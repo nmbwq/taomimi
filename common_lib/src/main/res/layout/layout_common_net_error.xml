@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/ll_net_error"
+    android:visibility="invisible">
+
+    <ImageView
+        android:id="@+id/iv_common_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/iv_common_sou" />
+
+    <TextView
+        android:id="@+id/tv_common_click_try"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="没有找到相关商品, 换个关键词试试看吧" />
+    <TextView
+        android:id="@+id/tv_common_click_trys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+    <TextView
+        android:id="@+id/tv_flash_sale"
+        android:layout_width="@dimen/dp_96"
+        android:layout_height="@dimen/dp_29"
+        android:visibility="gone"
+        android:background="@drawable/bg_flash_sale_finish"
+        android:gravity="center"
+        android:text="去别处逛逛"
+        android:textSize="@dimen/dp_12"
+        android:textColor="@color/c_979797"/>
+
+</LinearLayout>

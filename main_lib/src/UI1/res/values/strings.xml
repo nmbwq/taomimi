@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">main</string>
+
+
+    <string name="tab_nav_item0">首页</string>
+    <string name="tab_nav_item1">赚钱</string>
+    <string name="tab_nav_item2">大牌</string>
+    <string name="tab_nav_item3">朋友圈</string>
+    <string name="tab_nav_item4">我的</string>
+
+
+
+</resources>

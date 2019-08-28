@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_signin_challenge"
+    tools:context="java.com.lechuang.module.superentrance.SuperTutorialActivity">
+
+    <!--NestedScrollView-->
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_25"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_common_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/dp_10">
+
+                    <LinearLayout
+                        android:id="@+id/ll_title_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true">
+
+                        <ImageView
+                            android:id="@+id/iv_common_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:padding="@dimen/dp_10"
+                            android:src="@drawable/ic_common_back_white" />
+
+
+                    </LinearLayout>
+                    <!--标题-->
+                    <TextView
+                        android:id="@+id/iv_common_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:text="title"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_title"
+                android:layout_marginTop="@dimen/dp_36"
+                android:layout_marginBottom="@dimen/dp_59"
+                android:adjustViewBounds="true"
+                android:background="@drawable/bg_signin_challenge_content"
+                android:scaleType="fitXY" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_signin_challenge_cao" />
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

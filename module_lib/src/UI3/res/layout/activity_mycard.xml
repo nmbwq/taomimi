@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_F6F6F6"
+    android:orientation="vertical"
+    tools:context="java.com.lechuang.module.set.VerifyActivity">
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">-->
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ll_cart_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/status_view" />
+
+            <RelativeLayout
+                android:id="@+id/rl_common_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingRight="@dimen/dp_10">
+                <!--返回按钮-->
+                <ImageView
+                    android:id="@+id/iv_common_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/ic_common_back" />
+
+                <!--关闭按钮-->
+                <TextView
+                    android:id="@+id/iv_common_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/iv_common_back"
+                    android:padding="@dimen/dp_5"
+                    android:text="关闭"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="gone" />
+
+                <!--标题-->
+                <TextView
+                    android:id="@+id/iv_common_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginRight="@dimen/dp_95"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="我的觅卡"
+                    android:textColor="@color/c_main_text"
+                    android:textSize="@dimen/sp_16" />
+
+                <!--右面图片占位，不可与右面文字同时存在-->
+                <ImageView
+                    android:id="@+id/iv_common_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/ic_common_back"
+                    android:visibility="gone" />
+
+                <!--右面文字占位,不可与右面图片同时存在-->
+                <TextView
+                    android:id="@+id/tv_common_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:text="觅卡记录"
+                    android:textColor="@color/c_main_text"
+                    android:textSize="@dimen/sp_16"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smart_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_cart_title"
+            app:srlDragRate="0.5"
+            app:srlEnableAutoLoadMore="true"
+            app:srlFooterHeight="@dimen/dp_25"
+            app:srlFooterTriggerRate="1"
+            app:srlHeaderHeight="@dimen/dp_40"
+            app:srlHeaderMaxDragRate="1.5"
+            app:srlHeaderTriggerRate="1"
+            app:srlReboundDuration="200">
+
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:id="@+id/smart_record_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlDrawableArrowSize="@dimen/sp_14"
+                app:srlEnableLastTime="true"
+                app:srlTextSizeTitle="@dimen/sp_14" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/dp_40"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/dp_14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@color/c_F6F6F6"
+                    android:id="@+id/ll_net_error"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_common_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/iv_mycard_null" />
+
+                    <TextView
+                        android:id="@+id/tv_common_click_try"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="您还没有觅卡呢" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:id="@+id/smart_record_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlDrawableArrowSize="@dimen/sp_14"
+                app:srlTextSizeTitle="@dimen/sp_14" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_mycard_exchange"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_43"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_14"
+        android:background="@drawable/bg_mycard_et"
+        android:gravity="center"
+        android:text="兑换觅卡"
+        android:textColor="@color/c_F96A0E"
+        android:textSize="@dimen/dp_19" />
+
+</RelativeLayout>
